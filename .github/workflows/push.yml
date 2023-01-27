@@ -1,1 +1,31 @@
+name: Update Rules
+on:
+  schedule:
+    - cron: '0 8,16 * * *'
+  push:
+  workflow_dispatch:
 
+
+jobs:
+  Pushed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - uses: actions/checkout@main           
+      - name: Update Rules
+        run: |
+          bash ./script/mian.sh
+      - name: Git push assets to Github
+        run: |
+          git init
+          git config --local user.name "action"
+          git config --local user.email "action@github.com"
+          git branch -m main
+          git add .
+          git commit -m "Updated at $(date)"
+          #git remote add origin "https://${{ secrets.CODING_TokenUser }}:${{ secrets.CODING_Token }}@e.coding.net/damengzhu/banad/banad.git"
+          #git fetch --unshallow origin
+          git push -u -f origin main
