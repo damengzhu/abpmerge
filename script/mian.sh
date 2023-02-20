@@ -31,16 +31,19 @@ cat "abpmerge.txt" | grep \
 -e "\(^\|\w\)#@\?\$?#" \
 > "CSSRule.txt"
 
-# download easylist.txt
+# Downloads the easylist.txt from https://easylist-downloads.adblockplus.org/easylist.txt
+# Removes lines that include # or generichide, then generates a modified version
+# easylistnocssrule.txt to the current working directory.
+
+# Get the easylist.txt file
 wget -O easylist.txt https://easylist-downloads.adblockplus.org/easylist.txt
 
-# remove lines contains #
-sed '/#/d' easylist.txt > easylistnocssrule.txt
+# Removes lines that include # or generichide
+grep -v "#" easylist.txt | grep -v "generichide" > easylistnocssrule.txt
 
-# commit changes to github
-git add easylistnocssrule.txt
-git commit -m 'Added easylistnocssrule.txt.'
-git push
+# Copy easylistnocssrule.txt to the repository
+cp easylistnocssrule.txt /path/to/repository/
+
 
 
 # 删除缓存
