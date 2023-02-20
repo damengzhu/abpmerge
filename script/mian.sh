@@ -31,27 +31,17 @@ cat "abpmerge.txt" | grep \
 -e "\(^\|\w\)#@\?\$?#" \
 > "CSSRule.txt"
 
-import requests
+# download easylist.txt
+wget -O easylist.txt https://easylist-downloads.adblockplus.org/easylist.txt
 
-url = 'https://easylist-downloads.adblockplus.org/easylist.txt'
+# remove lines contains #
+sed '/#/d' easylist.txt > easylistnocssrule.txt
 
-# 下载文件
-r = requests.get(url)
+# commit changes to github
+git add easylistnocssrule.txt
+git commit -m 'Added easylistnocssrule.txt.'
+git push
 
-# 写入文件
-with open('easylist.txt', 'wb') as f:
-    f.write(r.content)
-
-# 读取文件
-with open('easylist.txt', 'r') as f:
-    lines = f.readlines()
-
-# 去除包含#的行
-lines = [line for line in lines if not line.startswith('#')]
-
-# 写入文件
-with open('easylistnocssrule.txt', 'w') as f:
-    f.writelines(lines)
 
 # 删除缓存
 rm i-*.txt
