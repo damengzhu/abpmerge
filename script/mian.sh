@@ -39,7 +39,7 @@ cat "abpmerge.txt" | grep \
 wget -O easylist.txt https://easylist-downloads.adblockplus.org/easylist.txt
 
 # Removes lines that include # or generichide
-grep -v "#" easylist.txt | grep -v "generichide" > easylistnocssrule.txt
+grep -v "#" easylist.txt | grep -v "generichide" | grep -v "domain" > easylistnocssrule.txt
 
 # Copy easylistnocssrule.txt to the repository
 cp easylistnocssrule.txt /path/to/repository/
