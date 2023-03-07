@@ -31,19 +31,17 @@ cat "abpmerge.txt" | grep \
 -e "\(^\|\w\)#@\?\$?#" \
 > "CSSRule.txt"
 
-# Downloads the easylist.txt from https://easylist-downloads.adblockplus.org/easylist.txt
-# Removes lines that include # or generichide, then generates a modified version
-# easylistnocssrule.txt to the current working directory.
+# 从 https://easylist-downloads.adblockplus.org/easylist.txt 下载 easylist.txt 文件
+# 移除包含 # 或 generichide 的行，然后生成 easylistnocssrule.txt 的修改版本到当前工作目录。
 
-# Get the easylist.txt file
-wget -O easylist.txt https://easylist-downloads.adblockplus.org/easylist.txt
+# 获取 easylist.txt 文件并将其存储在内存中
+EASYLIST=$(wget -q -O - https://easylist-downloads.adblockplus.org/easylist.txt)
 
-# Removes lines that include # or generichide
-grep -v "#" easylist.txt | grep -v "generichide" | grep -v "domain" > easylistnocssrule.txt
+# 移除包含 # 或 generichide 的行
+echo "$EASYLIST" | grep -v "#" | grep -v "generichide" | grep -v "domain" > easylistnocssrule.txt
 
-# Copy easylistnocssrule.txt to the repository
+# 将 easylistnocssrule.txt 复制到存储库中
 cp easylistnocssrule.txt /path/to/repository/
-
 
 
 # 删除缓存
