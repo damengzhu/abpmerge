@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: ABP Merge Rules
 ! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，easylistnocssrule，乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance，以及补充的一些规则
-! Version: 2023-05-02 08:06:55
-! Total count: 63044
+! Version: 2023-05-02 16:02:22
+! Total count: 63054
 ###Ad_windows
 ###ChapterView > .slide-baidu
 ###J_sideFooter.side_footer
@@ -566,6 +566,7 @@
 ##.article-pop-up-ad
 ##.article_ad
 ##.article_ad_top
+##.artplayer-plugin-ads
 ##.asb-index
 ##.asb-post
 ##.assort-ad
@@ -2292,7 +2293,6 @@ $websocket,domain=5nj.com|cechi8.com
 .icu/ads/
 .il/ads.
 .il/ads/
-.in/ads.
 .in/ads/
 .in/js/ads/
 .info/ad.js
@@ -2815,6 +2815,7 @@ $websocket,domain=5nj.com|cechi8.com
 /_js/prbd_6.19.0.js
 /_svc/ad/*
 /_xa/ads?
+/_xa/ads?$popup
 /_xa/ads_
 /a-ads.$third-party
 /a/?ad=
@@ -2863,7 +2864,6 @@ $websocket,domain=5nj.com|cechi8.com
 /ad-label.
 /ad-left.
 /ad-loader-
-/ad-loader.
 /ad-loading.
 /ad-maven-
 /ad-overlay-
@@ -2915,7 +2915,6 @@ $websocket,domain=5nj.com|cechi8.com
 /ad.skin.
 /ad.slot.
 /ad.view?
-/ad.xml$xmlhttprequest
 /ad/a.aspx?
 /ad/afc_
 /ad/article_
@@ -3239,7 +3238,6 @@ $websocket,domain=5nj.com|cechi8.com
 /adblockdetection.
 /adblocker-leader.
 /adblockkiller.
-/adblockpopup.
 /adbottom.
 /adbox.
 /adbox/*
@@ -3513,7 +3511,6 @@ $websocket,domain=5nj.com|cechi8.com
 /ads-sidebar-
 /ads-skyscraper.
 /ads-templateslist.
-/ads-top.
 /ads-vast-
 /ads.asp?
 /ads.bmp?
@@ -3522,7 +3519,6 @@ $websocket,domain=5nj.com|cechi8.com
 /ads.client-
 /ads.cms
 /ads.compat.
-/ads.css
 /ads.dll/*
 /ads.entry_
 /ads.htm$popup
@@ -3797,7 +3793,6 @@ $websocket,domain=5nj.com|cechi8.com
 /ads?zone=
 /ads?zone_id=
 /adsDesktop.
-/adsEnd.
 /adsImg/*
 /adsManagerV2.
 /adsPlugin/*
@@ -5180,7 +5175,6 @@ $websocket,domain=5nj.com|cechi8.com
 /global/ads/*
 /globalads-
 /gmu-download.oss-
-/google-ad-
 /google-ad?
 /google-ads/*
 /google-adsense.
@@ -5746,6 +5740,7 @@ $websocket,domain=5nj.com|cechi8.com
 /mob-ad.
 /mobile-ad.
 /mobile-ads/*
+/mobile/lele.html
 /mobile/mads.js
 /mobile_ad.
 /mobile_ad/*
@@ -7826,6 +7821,7 @@ $websocket,domain=5nj.com|cechi8.com
 423down.com##.content > h3 > a[rel="external nofollow"][target="_blank"]
 423down.com##.content > p[style]
 423down.com##.widget_d_banner
+423down.com##a[href*="/go."] > img
 423down.com##h3 > a[href^="https://mp.weixin.qq.com/s/"][target="_blank"] > span
 423down.com#?#.post-related > ul > li:-abp-has(> a[href^="http"]:not([href*="423down."]))
 423down.com#?#li:-abp-has(> .pic[href^="http"]:not([href*="423down."]))
@@ -11843,7 +11839,7 @@ ddooo.com#?#span:-abp-has(>p:-abp-contains(高速))
 ddooo.com#?#ul:-abp-has(>dd:-abp-contains(高速))
 ddrk.me##a[onclick^="ClickobayST();"]
 ddxsku.com##.adhtml
-ddys.*##+js(set-constant, Object.prototype.nobpreroll_, true)
+ddys.*##+js(set-constant, Object.prototype.cnobpreroll_, true)
 de.as.pptv.com
 dealmoon.com,weibo.com##.pic_ad
 demaxiya.com##.tp_box
@@ -14861,6 +14857,8 @@ moegirl.org.cn##.moe-card[data-region="oversea"]
 moegirl.org.cn##.moe-card[region="oversea"]
 moerats.com##div[style="box-shadow: 1px 1px 5px 5px rgba(17, 150, 196, 0.35);border-radius: 15px;"]
 molure.cn##.adplan
+money.163.com#$#.finance_header { height: auto !important; }
+money.163.com#$#.finance_header_gg { display: none !important; }
 money18.on.cc#@#.ads-bg
 moneynet.com.tw##.ads-fixed-bottom
 moneyweekly.com.tw##div[id*="_ScupioHomeAD"]
@@ -15060,6 +15058,7 @@ new.qq.com##+js(set, SSPAd.prototype.loadAd, noopFunc)
 new.qq.com#@##TopAd
 newcger.com##.banner_recom
 newduba.cn###jq_youxi
+newmobilelife.com###ATS_sticky
 news.163.com##.mod_netes_origina
 news.163.com##.mod_pageh5
 news.163.com##a[href^="http://g.163.com/"]
@@ -22350,6 +22349,7 @@ zzzyk.com###Tinfo
 ||agwdac.xyz^
 ||ah.pricegrabber.com^
 ||ah.sina.com.cn/iframe/
+||ahabcaca.com^
 ||ahadsply.com^
 ||ahadsply.com^$popup
 ||ahagreatlypromised.com^
@@ -26452,6 +26452,7 @@ zzzyk.com###Tinfo
 ||bootstrap-js.com^
 ||bootstraplugin.com^
 ||bop-bop-bam.com^
+||bopexacta.com^
 ||bopvetgel.com^
 ||borary.com^
 ||bordeaux.futurecdn.net^
@@ -27026,6 +27027,7 @@ zzzyk.com###Tinfo
 ||bytravel.cn/js/ad_
 ||bytravel.cn/js/b_
 ||bytravel.cn/js/s_
+||bytro.com^$image,third-party
 ||byvngx98ssphwzkrrtsjhnbyz5zss81dxygxvlqd05.com^
 ||byvngx98ssphwzkrrtsjhnbyz5zss81dxygxvlqd05.com^$popup
 ||byvue.com^$popup
@@ -27698,6 +27700,7 @@ zzzyk.com###Tinfo
 ||celeritascdn.com^
 ||cellaraudacityslack.com^
 ||cellarpassion.com^
+||cellistbeats.com^
 ||cellsmonitor.com^
 ||cellsquickie.com^
 ||cellsquickie.com^$popup
@@ -29458,7 +29461,7 @@ zzzyk.com###Tinfo
 ||cromo.name^$popup
 ||crooth.com^
 ||croplake.com^
-||cross-system.com^$third-party
+||cross-system.com^$script,third-party
 ||crossrider.com^
 ||crossroaddividerecorded.com^
 ||crottlerennin.com^
@@ -41276,6 +41279,7 @@ zzzyk.com###Tinfo
 ||kinripen.com^$popup
 ||kinsecutiony.club^
 ||kinsmenmislies.com^
+||kioeasodamid.com^
 ||kiosked.com^$third-party
 ||kipeir.com^
 ||kirgeemo.com^
@@ -41458,6 +41462,7 @@ zzzyk.com###Tinfo
 ||koapsuha.net^
 ||koatkm.xyz^
 ||kobeden.com^
+||kocaisin.xyz^
 ||kocpc.com.tw/adsbyso.js
 ||koekd.xyz^
 ||kofirusy.pro^
@@ -42840,6 +42845,7 @@ zzzyk.com###Tinfo
 ||lottoelite.com/banners/
 ||lottoleads.com^$popup
 ||lotuscard.cc/online/
+||loucegle.net^
 ||louchees.net^
 ||loud-tower.pro^
 ||loudmemory.pro^
@@ -48988,7 +48994,6 @@ zzzyk.com###Tinfo
 ||porngray.com^$third-party
 ||pornhat.com/banner/
 ||pornhb.me^$popup
-||pornhub.com/_xa/ads?$popup
 ||pornhyip.com^
 ||pornicom.com/jsb/
 ||pornj.com/wimtvggp/
@@ -50787,6 +50792,7 @@ zzzyk.com###Tinfo
 ||ramsonhunk.com^
 ||ramstripedbull.com^
 ||ramtakeout.com^
+||ramusiproxied.com^
 ||rancidstrait.com^
 ||randallbesin.com^
 ||randiul.com^
@@ -50938,6 +50944,7 @@ zzzyk.com###Tinfo
 ||readyblossomsuccesses.com^$popup
 ||readysugerfree.top^
 ||reagend.com^
+||reaginsroset.com^
 ||reajyu.net^
 ||real-consequence.pro^
 ||real-difficulty.pro^
@@ -51483,6 +51490,7 @@ zzzyk.com###Tinfo
 ||revolvemockerycopper.com^
 ||revolvemockerycopper.com^$popup
 ||revolveoppress.com^
+||revotedmilts.com^
 ||revresponse.com^
 ||revrtb.com^
 ||revrtb.net^
@@ -56143,6 +56151,7 @@ zzzyk.com###Tinfo
 ||thricemodestsuffix.com^
 ||thrillingblindly.com^
 ||thriveradioactivecheers.com^
+||throgetfd.com^
 ||throngsarseno.com^
 ||throughdfp.com^
 ||thrtle.com^
@@ -58228,6 +58237,7 @@ zzzyk.com###Tinfo
 ||utywsi.cn^
 ||uu1.3gu.com^
 ||uu5731uu.com^
+||uu6921uu.com^
 ||uu7819uu.com^
 ||uu9735uu.com^
 ||uubforbdc2om.com^
