@@ -32,14 +32,14 @@ cat "abpmerge.txt" | grep \
 -e "\(^\|\w\)#@\?\$?#" \
 > "CSSRule.txt"
 
-# 从 https://easylist-downloads.adblockplus.org/easylist.txt 下载 easylist.txt 文件
+# 从 https://filters.adtidy.org/android/filters/2_optimized.txt 下载规则文件
 # 移除包含 # 或 generichide 的行，然后生成 easylistnocssrule.txt 的修改版本到当前工作目录。
 
-# 获取 easylist.txt 文件并将其存储在内存中
-EASYLIST=$(wget -q -O - https://easylist-downloads.adblockplus.org/easylist.txt)
+# 获取规则文件并将其存储在内存中
+EASYLIST=$(wget -q -O - https://filters.adtidy.org/android/filters/2_optimized.txt)
 
 # 移除包含 # 或 generichide 的行
-echo "$EASYLIST" | grep -v "#" | grep -v "generichide" | grep -v "domain" > easylistnocssrule.txt
+echo "$EASYLIST" | grep -v "#" | grep -v "generichide" | grep -v "$domain" > easylistnocssrule.txt
 
 # 将 easylistnocssrule.txt 复制到存储库中
 cp easylistnocssrule.txt /path/to/repository/
