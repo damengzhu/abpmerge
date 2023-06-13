@@ -39,7 +39,7 @@ cat "abpmerge.txt" | grep \
 EASYLIST=$(wget -q -O - https://filters.adtidy.org/android/filters/2_optimized.txt)
 
 # 移除包含 # 或 generichide 的行
-echo "$EASYLIST" | grep -v "#" | grep -v "generichide" | grep -v "$domain" > easylistnocssrule.txt
+echo "$EASYLIST" | grep -v "#" | grep -v "generichide" > easylistnocssrule.txt
 
 # 将 easylistnocssrule.txt 复制到存储库中
 cp easylistnocssrule.txt /path/to/repository/
