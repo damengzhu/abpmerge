@@ -2,8 +2,8 @@
 ! Title: ABP Merge Rules
 ! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，AdGuard URL跟踪过滤器，EasyList no Element Rules，乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance，Adblock Warning Removal List以及补充的一些规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2023-07-24 11:28:42
-! Total count: 50489
+! Version: 2023-07-24 20:13:40
+! Total count: 50503
 ###AdBlockDialog
 ###Ad_windows
 ###ChapterView > .slide-baidu
@@ -741,7 +741,6 @@
 ##.clearfix > a > IMG[referrerpolicy='no-referrer'][src]:not([style='display: block;'])
 ##.clearfix.col5.row > #listBox
 ##.col-ad
-##.col-lg-3.col-xs-6 > .well
 ##.col-md-10 > .banner-table-block
 ##.col5 > dl#randomBox
 ##.col6 > a[onclick*="横幅"]
@@ -4285,6 +4284,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /bserver/*
 /bt*.com/imgs.js?t=
 /btba/ad/*
+/bugsnag.min.js$third-party
 /bultykh/ipp24/7/*
 /bundle/ads.
 /bunyad_
@@ -6616,6 +6616,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 18comic.vip##IMG[src^='//18comic.vip/media/albums/']
 18comic.vip##div[data-group^="skyscraper_"]
 18comic.vip#?#.thumb-overlay-albums > div[class][data-group^="photo_center_games_"]:has(> a[target="_blank"] > img)
+18comic.vip#@#.col-lg-3.col-xs-6 > .well
 18comic.vip,18comic.org##div[data-height="250"][data-width="300"]
 18h.avmimi.com##body > p[align="center"]:first-child
 18h.avmimi.com##body > table[width="100%"]:nth-child(2)
@@ -12000,6 +12001,7 @@ bilibili.com#?#.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-ca
 bilibili.com#?#.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__wrap
 bilibili.com#?#.eva-extension-body > .bili-video-card:-abp-has(.bili-video-card__info--ad)
 bilibili.com#?#.video-card-common:-abp-has(>.card-pic>a[href*="cm.bilibili.com"][data-target-url])
+bilibili.com#?#.video-page-special-card-small:-abp-has(>.card-box>.info>a[href^="http"]:not([href*=".bilibili.com/"]))
 bilibili.to###yytf
 bilibili.tv##.bstar-open-app
 bilyoner.com#%#//scriptlet('set-cookie', 'smartbanner-closed', 'true')
@@ -12657,6 +12659,8 @@ click108.com.tw##.AD_730280
 click_id=*_branch_referrer=$removeparam
 closermag.fr##div[id^="detection-block"]
 closermag.fr,grazia.fr,topsante.com##.dfp-slot
+cloud.tencent.com##.cdc-commercial-swiper
+cloud.tencent.com##.cdc-widget-global > div.cdc-widget-global__btn:not(.top)
 cloud.tencent.com##.mod-commercial
 clubdam.com##.bnr-app
 clubjt.jp##app-favorite-popup-chrome
@@ -14295,6 +14299,7 @@ gamerch.com##.wiki-head__menu--guide
 gamersglobal.de#@#.gg-box
 gamersky.com##.downLoadGame-2
 gamersky.com##.downLoadGame-2 + .dl_url
+gamersky.com##div[id^="adscontainer_"]
 gamersky.com##header[class^="ymw-header20"]
 games.qq.com##.dc-kf_list
 gamesubject.com###headb
@@ -17587,6 +17592,7 @@ myanimelist.net##._unit
 myanimelist.net##.header-mini-banner
 myanimelist.net##div[data-text="Get the App"]
 mybook.ru##.ant-btn-goToApp
+mybook.ru#?#.ant-col-lg-3 > div[class] > div[class]:has(> div[class] > a[href^="https://redirect.appmetrica.yandex.com/serve/"])
 mycq.qq.com##div[style^="width:960px;"]
 myday.com.tw##.myday_ad_950
 myday.com.tw##.myday_ad_left
@@ -23134,6 +23140,7 @@ zzzyk.com###Tinfo
 ||69adu.com/bootstrap.
 ||69e7.fun^
 ||69i.club^
+||69mok.com^
 ||69t49.com/floating/layer.js
 ||69v.club^
 ||69wx1.top^
@@ -29737,6 +29744,7 @@ zzzyk.com###Tinfo
 ||dd6364.com/js/777/
 ||dd778899dd.com^
 ||ddbuwo.cn^
+||ddgjjj.com^
 ||ddgjjj.com^$third-party
 ||ddhjxakewpp.com^
 ||dditscdn.com/*/advertisement.js
@@ -37200,6 +37208,7 @@ zzzyk.com###Tinfo
 ||lh54.top^
 ||lhare.xyz^
 ||lhdlbp.xyz^
+||lhiefl.com^
 ||lhippac.cn^
 ||lhmos.com^
 ||lhot.xyz^
@@ -37310,6 +37319,7 @@ zzzyk.com###Tinfo
 ||linkedassassin.com^
 ||linkedin.com/authwall?$removeparam=originalReferer
 ||linkedin.com/authwall?$removeparam=trkInfo
+||linkedin.com/feed/update$removeparam=origin
 ||linkedin.com/tscp-serving/
 ||linkedin.com^$removeparam=/^trk/
 ||linkedin.com^$removeparam=original_referer
@@ -39257,6 +39267,7 @@ zzzyk.com###Tinfo
 ||neitherpennylack.com^
 ||nekopoi.care/wp-content/plugins/mobiloud-smart-app-banner/
 ||nekto.me/chat/img/gplay.
+||nektonsrutate.com^
 ||nellmeeten.com^
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/*.mp4$media,redirect=noopmp4-1s,domain=ruutu.fi
 ||nen.com.cn/eap/
@@ -45444,6 +45455,7 @@ zzzyk.com###Tinfo
 ||target.georiot.com/Proxy.ashx$removeparam=tsid
 ||targetpush.co.kr^$third-party
 ||taroads.com^
+||tarqk5.com^
 ||tartator.com^
 ||tastelesstoes.com^$third-party
 ||tastelesstrucks.com^$third-party
@@ -46546,6 +46558,7 @@ zzzyk.com###Tinfo
 ||txzqw.me/tupian/
 ||ty-baidu.xyz^
 ||ty121.cn/IAA/
+||ty8bz.com^
 ||tyawwj.cn^
 ||tychon.bid^
 ||tychon.bid^$popup
@@ -49524,6 +49537,7 @@ zzzyk.com###Tinfo
 ||ymuitydkdoy.com^
 ||ymyile.xyz^
 ||ymzcapp.shop^
+||yna.co.kr^$removeparam=site
 ||ynbyutongdianqi.com^
 ||yncjsc.cn^
 ||ynet.co.il/*/Teaser/MarketSchedual_
