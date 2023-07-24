@@ -4,7 +4,7 @@
 curl -o i-1.txt https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
 curl -o i-2.txt https://filters.adtidy.org/extension/ublock/filters/224.txt
 curl -o i-3.txt https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt
-curl -o i-4.txt https://raw.githubusercontent.com/damengzhu/abpmerge/main/easylistnocssrule.txt
+curl -o i-4.txt https://raw.githubusercontent.com/damengzhu/abpmerge/main/EasyListnoElementRules.txt
 curl -o i-5.txt https://filters.adtidy.org/android/filters/20_optimized.txt
 curl -o i-6.txt https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
 curl -o i-7.txt https://filters.adtidy.org/android/filters/17_optimized.txt
@@ -22,7 +22,7 @@ num=`cat i-tmp.txt | wc -l`
 # 添加标题和时间
 echo "[Adblock Plus 2.0]" >> i-tpdate.txt
 echo "! Title: ABP Merge Rules" >> i-tpdate.txt
-echo "! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，AdGuard URL跟踪过滤器，easylistnocssrule，乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance，Adblock Warning Removal List以及补充的一些规则" >> i-tpdate.txt
+echo "! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，AdGuard URL跟踪过滤器，EasyList no Element Rules，乘风视频广告过滤规则、EasylistChina、EasylistLite、CJX'sAnnoyance，Adblock Warning Removal List以及补充的一些规则" >> i-tpdate.txt
 echo "! Homepage: https://github.com/damengzhu/abpmerge" >> i-tpdate.txt
 echo "! Version: `date +"%Y-%m-%d %H:%M:%S"`" >> i-tpdate.txt
 echo "! Total count: $num" >> i-tpdate.txt
@@ -42,9 +42,9 @@ cat "abpmerge.txt" | grep \
 EASYLIST=$(wget -q -O - https://filters.adtidy.org/android/filters/2_optimized.txt)
 
 # 移除包含 # 或 generichide 的行
-echo "$EASYLIST" | grep -v "#" | grep -v "generichide" > easylistnocssrule.txt
+echo "$EASYLIST" | grep -v "#" | grep -v "generichide" > EasyListnoElementRules.txt
 
-# 将 easylistnocssrule.txt 复制到存储库中
+# 将 EasyListnoElementRules.txt 复制到存储库中
 cp easylistnocssrule.txt /path/to/repository/
 
 
