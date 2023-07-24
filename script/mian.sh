@@ -45,7 +45,7 @@ EASYLIST=$(wget -q -O - https://filters.adtidy.org/android/filters/2_optimized.t
 echo "$EASYLIST" | grep -v "#" | grep -v "generichide" > EasyListnoElementRules.txt
 
 # 将 EasyListnoElementRules.txt 复制到存储库中
-cp easylistnocssrule.txt /path/to/repository/
+cp EasyListnoElementRules.txt /path/to/repository/
 
 
 # 删除缓存
