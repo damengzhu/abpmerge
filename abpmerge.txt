@@ -2,8 +2,8 @@
 ! Title: ABP Merge Rules
 ! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，AdGuard URL跟踪过滤器，EasyList no Element Rules，乘风视频广告过滤规则，EasylistChina，ChinaList+EasyList(修正)，EasylistLite，CJX'sAnnoyance，Adblock Warning Removal List以及补充的一些规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2023-08-09 20:14:51
-! Total count: 54968
+! Version: 2023-08-10 08:17:45
+! Total count: 54976
 ###AdBlockDialog
 ###Ad_windows
 ###ChapterView > .slide-baidu
@@ -2473,19 +2473,11 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 -ad-bottom-
 -ad-button-
 -ad-column-
--ad-content/
--ad-left.
 -ad-manager/$~stylesheet
--ad-resize-
 -ad-right.
 -ad-sidebar-
--ad-strip.
--ad-text_
 -ad-top.
 -ad-unit.
--ad-unit/
--ad-util-
--ad-utility-
 -ad.jpg.pagespeed.
 -ad.jpg?
 -ad.php?
@@ -2496,7 +2488,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 -adblocker-detection/
 -adbox-
 -adimage-
--adnow.$domain=~zappistore.com
 -ads-management/
 -ads-manager/$domain=~wordpress.org
 -ads.php?
@@ -3402,7 +3393,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /ad/files/*
 /ad/get_
 /ad/html/*
-/ad/iframe.
 /ad/image/*
 /ad/images/*
 /ad/images/*$domain=~studiocalling.it
@@ -3410,7 +3400,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /ad/index.
 /ad/index/*
 /ad/index_
-/ad/inline?
 /ad/jsonp/*
 /ad/load.
 /ad/player_
@@ -3445,6 +3434,8 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /adStrip.
 /adTools.
 /adTopBar.
+/adUnitsBreakpoints.
+/adUnitsData.
 /ad_250x250_
 /ad_300.
 /ad_300250.
@@ -4930,6 +4921,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /google-adsense.
 /google-afc.
 /google-dfp-
+/googleAdsManager.
 /google_afc.
 /google_afc_
 /google_afs.
@@ -6905,6 +6897,8 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 1fzw.com##.hd-tops
 1fzw.com##.index_ad_top_wz
 1fzw.com##.tops
+1keydata.com##+js(abort-current-script, document.querySelector, window.getComputedStyle)
+1keydata.com#$##detect.ad-placement { display: block !important; }
 1kkk.com##.kk2.cc
 1kkk.com##.lanrenzhijia
 1kkk.com,40407.com,5068.com,88148.com,chazidian.com,china.com,cnwnews.com,elecfans.com,ghjie.com,iask.ca,ifeng.com,iqilu.com,juqingba.cn,liuxue86.com,qzwb.com,sina.com.cn,tianya.cn,zsnews.cn##.gg
@@ -7974,7 +7968,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@/fingerprint2.min.js$domain=csdn.net|neets.cc|passport.vpgame.com|shixiseng.com
 @@/fingerprintjs2.min.js$domain=imooc.com
 @@/fuckadblock.$domain=datehub.co|golangnote.com|joyk.com|liumingye.cn|lnk2.cc|poedb.tw|share1223.com
-@@/fuckadblock.js$domain=playview.io
 @@/fuckadblock.js$domain=uniqueten.net|topcryptoz.net|allcryptoz.net|meucdn.vip|yandexcdn.com|scenelife.org|hqq.tv|newhost.me|czxxx.org|waaw.tv
 @@/guanggao/*$domain=icbc.com.cn|igame.qq.com
 @@/hitCount.$script,domain=on.cc
@@ -8545,6 +8538,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||api.mapbox.com/*?secure&access_token=$stealth
 @@||api.mercari.jp^$stealth
 @@||api.minecraftservices.com^$stealth
+@@||api.moeni.net^$xmlhttprequest,stealth=referrer|ip
 @@||api.onedrive.com^$stealth
 @@||api.ott.kinopoisk.ru^$stealth
 @@||api.playstation.com^$stealth
@@ -8763,6 +8757,8 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||cd.connatix.com/connatix.playspace.js$domain=inc.com
 @@||cd.connatix.com/connatix.playspace.js$domain=loot.tv
 @@||cdn*.jianshu.io^$stealth
+@@||cdn*.movcdn.xyz^$xmlhttprequest,stealth=referrer|ip
+@@||cdn*.movcdns.xyz^$xmlhttprequest,stealth=referrer|ip
 @@||cdn-msp*.18comic.*^
 @@||cdn-static.egybest.net/static/global/js/adblock.js
 @@||cdn-surfline.com/quiver/*/scripts/$domain=surfline.com
@@ -10607,6 +10603,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||share1223.com^$generichide
 @@||shijue.me/advertise/getList?
 @@||shine.cn/showadcode2.asp?posid=68&
+@@||shinsekai.me/bbs/board.php$stealth=webrtc
 @@||shmeea.edu.cn^$generichide
 @@||shop.letv.com^
 @@||shopback.com.tw^$generichide
@@ -20300,6 +20297,7 @@ ssr.tools##.widget_custom_html:nth-child(n+2)
 ssr.tools,zhujiwiki.com##.asb-post-footer
 sssam.com##+js(set-constant, ads, '')
 sssam.com##.widget_html_ad
+sstv.fun##.container > a[target="_blank"] > img
 sstv.pw##.container > a > img[style="width: 100%;"]
 ssuip.com###mask
 st.benesse.ne.jp###regist
@@ -20641,7 +20639,6 @@ tieba.baidu.com###j_light_see_index
 tieba.baidu.com###pagelet_entertainment-liveshow\/pagelet\/video_head
 tieba.baidu.com##.app-view > div.top-guide
 tieba.baidu.com##.app_download_box
-tieba.baidu.com##.clearfix.thread_item_box
 tieba.baidu.com##.client_ad_banner
 tieba.baidu.com##.client_ad_topBanner
 tieba.baidu.com##.client_ad_topBanner + .statistics_img_view + li[class]
@@ -23829,6 +23826,7 @@ zzzyk.com###Tinfo
 ||5fet4fni.de^
 ||5fz.cc/t/aimg/tao
 ||5fzd.com/gg/
+||5ggj5cp.com^
 ||5glyqw.com^
 ||5h7370j8.cn^
 ||5hte21mz.com^
@@ -27538,6 +27536,7 @@ zzzyk.com###Tinfo
 ||battepush.com^
 ||baucdngb.xyz^
 ||bavde1.icu^
+||bavde3.icu^
 ||bavei.com/img/*.png
 ||bavxxf.xyz^
 ||bawdybalance.com^$third-party
@@ -27963,6 +27962,7 @@ zzzyk.com###Tinfo
 ||bhicxb.cn^
 ||bhj691.com^
 ||bhj699.com^
+||bhjuy10.com^
 ||bhny.asia^
 ||bhpprfk.cn^
 ||bhsvlym.cn^
@@ -28678,6 +28678,7 @@ zzzyk.com###Tinfo
 ||bup.seksohub.com^
 ||bupb.xyz^
 ||bupbrosrn.com^
+||bupidt.xyz^
 ||buqkrzbrucz.com^
 ||burialdiffer.com^
 ||bursa.conxxx.pro^
@@ -31200,6 +31201,7 @@ zzzyk.com###Tinfo
 ||dalipan.com/api/taobao
 ||dalld.xyz^
 ||dalmatinskiportal.hr/*/baneri/
+||dalmfn.xyz^
 ||dalucm.xyz^
 ||daluxmurwthhk.com^
 ||dalyai.com^
@@ -34616,7 +34618,6 @@ zzzyk.com###Tinfo
 ||get.adobe.com^$removeparam=type
 ||get.adobe.com^$removeparam=workflow
 ||get.cryptobrowser.site^
-||getadjacent.com^
 ||getallt1.com^
 ||getalltraffic.com^
 ||getapo.com^
@@ -36722,7 +36723,7 @@ zzzyk.com###Tinfo
 ||hypogeeinial.com^
 ||hypots.com^
 ||hypwbv.xyz^
-||hyros.com^
+||hyros.com^$third-party
 ||hystericalcloth.com^$third-party
 ||hystericalpotprecede.com^
 ||hytzp.cn^
@@ -40309,6 +40310,7 @@ zzzyk.com###Tinfo
 ||logservice.hicloud.com^
 ||logservice1.hicloud.com^
 ||loispp.com^
+||lokngd.com^
 ||loldyttw.com/blr.js
 ||loldyttw.com/skin/lol/js/ds.js
 ||loli.io^$domain=kisssub.org
@@ -44247,6 +44249,7 @@ zzzyk.com###Tinfo
 ||pjogndc8ixoidna.360doc.cn^
 ||pjoqkmks.com^
 ||pjqchcfwtw.com^
+||pjsbuhl.icu^
 ||pjtime.com/js/show_ad
 ||pjuulzj.cn^
 ||pk331.cn^
@@ -47801,6 +47804,7 @@ zzzyk.com###Tinfo
 ||smartclick.net^$third-party
 ||smartclip.net^$third-party
 ||smartfarming.cn^
+||smartkhabrinews.com^$replace=/'https:\/\/tpc\.googlesyndication\.com\/simgad\/[\s\S]*?'/'https:\/\/streama2z.com\/assets\/strlogo.png'/,document
 ||smartmail.cyou^
 ||smartmuchang.com^
 ||smartnews-ads.com^$third-party
@@ -48502,6 +48506,7 @@ zzzyk.com###Tinfo
 ||strdef.world/js/acheck.js
 ||stream.miku-box.com/assets/js/base*.js$replace=/"ads":\[[\s\S]*?\]/"ads":[]/
 ||stream037hd.xyz/player.php?$replace=/"ads": ?\[[\s\S]*?\]/"ads":[]/
+||streama2z.com^$replace=/'https:\/\/tpc\.googlesyndication\.com\/simgad\/[\s\S]*?'/'https:\/\/streama2z.com\/assets\/strlogo.png'/,document
 ||streampsh.top^
 ||streenoutrove.life^
 ||streetupwind.com^
@@ -49693,6 +49698,7 @@ zzzyk.com###Tinfo
 ||torioluor.com^
 ||toromclick.com^
 ||torrentfreak.com/wp-content/banners/
+||torrentinvites.org/seedboxescc.gif
 ||torwq.xyz^
 ||toskmisway.com^
 ||tosspowers.com^
@@ -49741,6 +49747,7 @@ zzzyk.com###Tinfo
 ||tp.sgcn.com^
 ||tp4sul.jwzd.com.cn^
 ||tpc.googlesyndication.com/simgad/$image,redirect=2x2-transparent.png,domain=a2zapk.io
+||tpc.googlesyndication.com/simgad/$image,redirect=2x2-transparent.png,domain=smartkhabrinews.com|streama2z.com
 ||tpc.googlesyndication.com^
 ||tpcserve.com^
 ||tpdads.com^
@@ -52985,6 +52992,7 @@ zzzyk.com###Tinfo
 ||xkhall.xyz^
 ||xkjcpl.cn^
 ||xkjxgt.com^$third-party
+||xkmwxwy.cn^
 ||xkpbcd.com^
 ||xkqit.com^
 ||xksdqikwbwat.com^
