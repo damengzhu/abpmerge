@@ -1,10 +1,14 @@
-! Checksum: G//ofIoMrIpNRCdgAwmY2w
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1707291339-3600.patch
+! Checksum: xAubiwiHQYFJEgn1ygakgQ
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1707330948-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.21.18
-! TimeUpdated: 2024-02-07T07:32:43+00:00
+! Version: 2.3.21.28
+! TimeUpdated: 2024-02-07T18:32:46+00:00
 ! Expires: 5 days (update frequency)
+||bqeuffmdobmpoe.xyz^
+||njsbccyenjyq.com^
+||vowpairmax.live^$popup
+||slownansuch.info^$popup
 ||stethuth.xyz^
 ||ktxvbcbfs.xyz^
 ||ro.ondatrakrafts.com^
@@ -425,6 +429,15 @@
 ||leaderhistliness.info^
 !+ NOT_OPTIMIZED
 ||amazon-adsystem.com^
+193.200.64.30$network
+193.200.64.31$network
+193.200.65.61$network
+212.117.190.201$network
+212.117.190.202$network
+212.117.190.210$network
+212.117.190.211$network
+212.117.190.212$network
+212.117.190.213$network
 91.204.226.224$network
 57.128.71.215$network
 185.246.188.125$network
@@ -999,9 +1012,7 @@ trshow.info$$script[wildcard="*track*atob*ShadowRoot*"][min-length="5000"][max-l
 ||free-mp3-download.net/js/app.js$replace=/_0x.{1\,10}\(!!\[]\);return;//
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,redirect=noopjs,domain=free-mp3-download.net
 ||bbpic.ru/js/plears.js
-@@||ytlarge.com/youtube/css/mnpw3.js
-@@||ytlarge.com/youtube/css/apopwin.js
-@@||ytlarge.com/youtube/css/content-ads.js
+@@||ytlarge.com/youtube/css/$script
 @@||ytlarge.com/youtube/ad/
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ytlarge.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*fy2021.js$domain=ytlarge.com
@@ -2738,6 +2749,12 @@ $script,third-party,denyallow=linkvertise.com|fastly.net|statically.io|sharecast
 ||livehdplay.ru/blast.js
 ||lovesomecommunity.com/blast.js
 ||b4ucast.com/blast.js
+||faqwiki.us/ezais/
+||ezojs.com/beardeddragon/
+||time4tv.online/iframe/
+||embedstreams.me/partytown/
+||l.js-assets.cloud/min.t.*.js
+||solarmovie.pe/ajax/banners
 ||pornx.to/wp-content/uploads/ad*x*.png
 ||ads.talk.tv/ads.talktv.min.js
 ||dnasolves.com/static/js/embed.js$domain=websleuths.com
@@ -3183,6 +3200,7 @@ $domain=adserver.juicyads.com
 /^https?:\/\/(?:www\.|[a-z0-9]{7,10}\.)?[a-z0-9-]{5,}\.(?:com|bid|link|live|online|top|club)\/\/?(?:[a-z0-9]{2}\/){2,3}[a-f0-9]{32}\.js/$script,xmlhttprequest,third-party
 /^https?:\/\/(?:www\.|[a-z0-9]{7,10}\.)?[a-z0-9-]{5,}\.(?:com|bid|link|live|online|top|club)\/\/?(?:[a-z0-9]{2}\/){2,3}[a-f0-9]{32}\.js/$script,third-party,redirect=noopjs
 /(?:com|net)\/[a-z-]{3,10}\.html$/$subdocument,~third-party,domain=imgadult.com|imgdrive.net|imgtaxi.com|imgwallet.com
+!+ NOT_OPTIMIZED
 !+ NOT_OPTIMIZED
 !+ NOT_OPTIMIZED
 !+ NOT_OPTIMIZED
@@ -4379,6 +4397,8 @@ $csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: www.googletagma
 @@||googleadservices.com^$domain=google.ae|google.at|google.be|google.by|google.ca|google.ch|google.cl|google.cn|google.co.id|google.co.in|google.co.jp|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.bd|google.com.br|google.com.co|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.ng|google.com.pe|google.com.ph|google.com.pk|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.vn|google.de|google.dk|google.ee|google.es|google.fr|google.gr|google.hu|google.ie|google.it|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk|google.tn
 !+ PLATFORM(android)
 @@||adguard.com^$stealth
+@@||embedstreams.me^$stealth=referrer,subdocument
+@@||cloudfront.net^$stealth=referrer,domain=routexl.de
 @@||tuborstb.co^$stealth=3p-auth
 @@||lessornot.ws^$stealth=ip
 @@||filemoon.sx/e/$stealth=referrer
@@ -5144,7 +5164,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /adjs.php
 /adlib.min.js
 /adlog.php
-/admanager.$~object,~xmlhttprequest,domain=~admanager.alzura.com|~admanager.google.com|~admanager.line.biz|~admanager.opera.com|~admanager.roku.com|~admanager.sevio.app
+/admanager.$~object,~xmlhttprequest,domain=~admanager.alzura.com|~admanager.google.com|~admanager.line.biz|~admanager.opera.com|~admanager.roku.com|~admanager.sevio.com
 /admanager/*$~object,domain=~admanager.line.biz|~blog.google|~konograma.com
 /admgr.
 /admitad.js
@@ -6032,7 +6052,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 ://a.ads.
 ://ad-api-
 ://ad1.
-://ads.$~image,domain=ads.8designers.com|ads.ac.uk|ads.adstream.com.ro|ads.allegro.pl|ads.am|ads.amazon|ads.apple.com|ads.atmosphere.copernicus.eu|ads.band|ads.bestprints.biz|ads.brave.com|ads.buscaempresas.co|ads.cafebazaar.ir|ads.colombiaonline.com|ads.comeon.com|ads.cvut.cz|ads.doordash.com|ads.dosocial.ge|ads.dosocial.me|ads.elevateplatform.co.uk|ads.finance|ads.google.com|ads.gree.net|ads.gurkerl.at|ads.harvard.edu|ads.instacart.com|ads.jiosaavn.com|ads.kaipoke.biz|ads.kazakh-zerno.net|ads.kifli.hu|ads.knuspr.de|ads.listonic.com|ads.magalu.com|ads.mercadolivre.com.br|ads.mgid.com|ads.microsoft.com|ads.midwayusa.com|ads.mobilebet.com|ads.msstate.edu|ads.mst.dk|ads.mt|ads.nc|ads.nipr.ac.jp|ads.olx.pl|ads.pinterest.com|ads.quasaraffiliates.com|ads.remix.es|ads.rohlik.cz|ads.route.cc|ads.safi-gmbh.ch|ads.scotiabank.com|ads.selfip.com|ads.shopee.cn|ads.shopee.co.th|ads.shopee.com.br|ads.shopee.com.mx|ads.shopee.com.my|ads.shopee.kr|ads.shopee.ph|ads.shopee.pl|ads.shopee.sg|ads.shopee.tw|ads.shopee.vn|ads.smartnews.com|ads.snapchat.com|ads.socialtheater.com|ads.spotify.com|ads.studyplus.co.jp|ads.taboola.com|ads.tiktok.com|ads.twitter.com|ads.typepad.jp|ads.us.tiktok.com|ads.viksaffiliates.com|ads.vk.com|ads.watson.ch|badassembly.com|caravansforsale.co.uk|fusac.fr|memo2.nl|reempresa.org|satmetrix.com|seriouswheels.com
+://ads.$~image,domain=~ads.8designers.com|~ads.ac.uk|~ads.adstream.com.ro|~ads.allegro.pl|~ads.am|~ads.amazon|~ads.apple.com|~ads.atmosphere.copernicus.eu|~ads.band|~ads.bestprints.biz|~ads.bikepump.com|~ads.brave.com|~ads.buscaempresas.co|~ads.cafebazaar.ir|~ads.colombiaonline.com|~ads.comeon.com|~ads.cvut.cz|~ads.doordash.com|~ads.dosocial.ge|~ads.dosocial.me|~ads.elevateplatform.co.uk|~ads.finance|~ads.google.com|~ads.gree.net|~ads.gurkerl.at|~ads.harvard.edu|~ads.instacart.com|~ads.jiosaavn.com|~ads.kaipoke.biz|~ads.kazakh-zerno.net|~ads.kifli.hu|~ads.knuspr.de|~ads.listonic.com|~ads.magalu.com|~ads.mercadolivre.com.br|~ads.mgid.com|~ads.microsoft.com|~ads.midwayusa.com|~ads.mobilebet.com|~ads.msstate.edu|~ads.mst.dk|~ads.mt|~ads.nc|~ads.nipr.ac.jp|~ads.olx.pl|~ads.pinterest.com|~ads.quasaraffiliates.com|~ads.red|~ads.rohlik.cz|~ads.route.cc|~ads.safi-gmbh.ch|~ads.scotiabank.com|~ads.selfip.com|~ads.shopee.cn|~ads.shopee.co.th|~ads.shopee.com.br|~ads.shopee.com.mx|~ads.shopee.com.my|~ads.shopee.kr|~ads.shopee.ph|~ads.shopee.pl|~ads.shopee.sg|~ads.shopee.tw|~ads.shopee.vn|~ads.smartnews.com|~ads.snapchat.com|~ads.socialtheater.com|~ads.spotify.com|~ads.studyplus.co.jp|~ads.taboola.com|~ads.tiktok.com|~ads.twitter.com|~ads.typepad.jp|~ads.us.tiktok.com|~ads.viksaffiliates.com|~ads.vk.com|~ads.watson.ch|~badassembly.com|~caravansforsale.co.uk|~fusac.fr|~memo2.nl|~reempresa.org|~satmetrix.com|~seriouswheels.com
 ://ads2.
 ://adv.$domain=~adv.asahi.com|~adv.bet|~adv.blue|~adv.chunichi.co.jp|~adv.cincsys.com|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.design|~adv.digimatix.ru|~adv.ec|~adv.ee|~adv.gg|~adv.hokkaido-np.co.jp|~adv.kompas.id|~adv.lack-girl.com|~adv.mcr.club|~adv.michaelgat.com|~adv.msk.ru|~adv.neosystem.co.uk|~adv.peronihorowicz.com.br|~adv.rest|~adv.ru|~adv.tools|~adv.trinet.ru|~adv.ua|~adv.vg|~adv.vn.ua|~adv.yomiuri.co.jp|~advancedradiology.com|~advids.co|~farapp.com|~pracuj.pl|~r7.com|~typeform.com|~welaika.com
 ://affiliate.$third-party
@@ -14069,6 +14089,7 @@ _800x80_
 ||pauzajoo.net^
 ||pavfazbwiap.com^
 ||pavymoieter.com^
+||pawkilycurvous.com^
 ||paxsfiss.com^
 ||paxyued.com^
 ||payoffdisastrous.com^
@@ -15512,6 +15533,7 @@ _800x80_
 ||shunparagraphdim.com^
 ||shurfhlba.com^
 ||shutesaroph.com^
+||shutunga.com^
 ||shydastidu.com^
 ||sibcjyml.com^
 ||sibgycqzgj.com^
@@ -15977,6 +15999,7 @@ _800x80_
 ||tapjoyads.com^
 ||tarandunlame.life^
 ||taroads.com^
+||tarsiusbaconic.com^
 ||tartator.com^
 ||tasterscaltha.com^
 ||tastierxyphoid.com^
@@ -16006,6 +16029,7 @@ _800x80_
 ||techniciancocoon.com^
 ||technoratimedia.com^
 ||technoshadows.com^
+||teddedskeich.com^
 ||teefousoju.com^
 ||teemooge.net^
 ||tegronews.com^
@@ -16122,6 +16146,7 @@ _800x80_
 ||timesroadmapwed.com^
 ||timot-cvk.info^
 ||tipcupids.com^
+||tipmanperdure.com^
 ||tipsembankment.com^
 ||tipslyrev.com^
 ||tiredomlovered.com^
@@ -17858,6 +17883,7 @@ _800x80_
 ||grapeshot.co.uk^$third-party
 ||greedseed.world^$third-party
 ||groovinads.com^$third-party
+||grv.media^$third-party
 ||grvmedia.com^$third-party
 ||gumgum.com^$third-party
 ||headerbidding.ai^$third-party
@@ -18916,6 +18942,7 @@ _800x80_
 ||amazonaws.com/jsstore/$domain=babylonbee.com
 ||amazonaws.com^$domain=downloadpirate.com|hexupload.net|krunkercentral.com|uploadhaven.com
 ||androidauth.wpengine.com/wp-json/api/advanced_placement/api-$domain=androidauthority.com
+||api.mumuglobal.com^
 ||armyrecognition.com/images/stories/customer/
 ||assets.presearch.com/backgrounds/
 ||backgrounds.wetransfer.net$image
@@ -18924,6 +18951,7 @@ _800x80_
 ||beap.gemini.yahoo.com^
 ||bernama.com/storage/banner/
 ||bestblackhatforum.com/images/my_compas/
+||booking.com/flexiproduct.html?product=banner$domain=happywayfarer.com
 ||bordeaux.futurecdn.net^
 ||calguns.net/images/ad
 ||cdnads.geeksforgeeks.org^
@@ -18989,6 +19017,7 @@ _800x80_
 ||myvidster.com/js/myv_ad_camp2.php
 ||n.gemini.yahoo.com^
 ||newsnow.co.uk/pharos.js
+||nexvelar.b-cdn.net/videoplayback_.mp4
 ||nyaa.land/static/p2.jpg
 ||nzherald.co.nz/pf/resources/dist/scripts/global-ad-script.js
 ||outbrain.com^$domain=bgr.com|buzzfeed.com|dto.to|investing.com|mamasuncut.com|mangatoto.com|tvline.com
@@ -19001,6 +19030,7 @@ _800x80_
 ||prebid-server.newsbreak.com^
 ||presearch.com/affiliates|$xmlhttprequest
 ||presearch.com/coupons|$xmlhttprequest
+||presearch.com/tiles^
 ||prod-sponsoredads.mkt.zappos.com^
 ||products.gobankingrates.com^
 ||puzzle-slant.com/images/ad/
@@ -19021,6 +19051,7 @@ _800x80_
 ||startpage.com/sp/adsense/
 ||startpage.com/sp/Tgz1k/adsense/
 ||staticflickr.com/ap/build/javascripts/prbd-$script,domain=flickr.com
+||store-api.mumuglobal.com^
 ||stuff.co.nz/static/adnostic/
 ||stuff.co.nz/static/stuff-adfliction/
 ||survivalblog.com/marketplace/
