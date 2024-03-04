@@ -2,8 +2,8 @@
 ! Title: ABP Merge Rules
 ! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，AdGuard URL跟踪过滤器，EasyList no Element Rules，乘风视频广告过滤规则，EasylistChina，ChinaList+EasyList(修正)，EasylistLite，CJX'sAnnoyance，Adblock Warning Removal List以及补充的一些规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2024-03-03 20:13:41
-! Total count: 56810
+! Version: 2024-03-04 10:07:07
+! Total count: 56826
 ###ADtip
 ###AdBlockDialog
 ###Ad_windows
@@ -2928,6 +2928,9 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 .com/playlist?list=$jsonprune=\$..[adPlacements\, adSlots\, playerAds],domain=youtubekids.com|youtube-nocookie.com|youtube.com
 .com/playlist?list=$jsonprune=\$.playerConfig.ssapConfig,domain=youtubekids.com|youtube-nocookie.com|youtube.com
 .com/playlist?list=$jsonprune=\$.streamingData.serverAbrStreamingUrl,domain=youtubekids.com|youtube-nocookie.com|youtube.com
+.com/playlist?list=$replace=/"auxiliaryUi":\{"messageRenderers":\{"bkaEnforcementMessageViewModel.*?e\}\}\}\,//,domain=www.youtube.com
+.com/playlist?list=$replace=/("trackingParam":"k5DfmPxhoXpR)[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{151}lLKPQGiS"\})/\$1\$2/,domain=www.youtube.com
+.com/playlist?list=$replace=/("trackingParam":"kx_fmPxhoPZR)[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{55}lLKPQ-SS"\})/\$1\$2/,domain=www.youtube.com
 .com/pv.gif?
 .com/pw/waWQiOjEw
 .com/qq.js$third-party
@@ -2959,7 +2962,8 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 .com/vj2/$script,third-party
 .com/vodad.js
 .com/watch?v=$replace=/"auxiliaryUi":\{"messageRenderers":\{"bkaEnforcementMessageViewModel.*?e\}\}\}\,//,domain=www.youtube.com
-.com/watch?v=$replace=/("trackingParam":"k[-_0-9A-Za-z]{2}fmPxho[-_0-9A-Za-z]{3})[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{55}lLKPQ[-_0-9A-Za-z]{2}S"\})/\$1\$2/,domain=www.youtube.com
+.com/watch?v=$replace=/("trackingParam":"k5DfmPxhoXpR)[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{151}lLKPQGiS"\})/\$1\$2/,domain=www.youtube.com
+.com/watch?v=$replace=/("trackingParam":"kx_fmPxhoPZR)[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{55}lLKPQ-SS"\})/\$1\$2/,domain=www.youtube.com
 .com/watch?v=$xmlhttprequest,jsonprune=\$..[adPlacements\, adSlots\, playerAds],domain=youtubekids.com|youtube-nocookie.com|youtube.com
 .com/watch?v=$xmlhttprequest,jsonprune=\$.playerConfig.ssapConfig,domain=youtubekids.com|youtube-nocookie.com|youtube.com
 .com/watch?v=$xmlhttprequest,jsonprune=\$.streamingData.serverAbrStreamingUrl,domain=youtubekids.com|youtube-nocookie.com|youtube.com
@@ -5678,7 +5682,8 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /youtubei/v*/player?$jsonprune=\$.playerConfig.ssapConfig,domain=youtubekids.com|youtube-nocookie.com|youtube.com
 /youtubei/v*/player?$jsonprune=\$.streamingData.serverAbrStreamingUrl,domain=youtubekids.com|youtube-nocookie.com|youtube.com
 /youtubei/v*/player?$replace=/"auxiliaryUi":\{"messageRenderers":\{"bkaEnforcementMessageViewModel.*?e\}\}\}\,//,domain=www.youtube.com
-/youtubei/v*/player?$replace=/("trackingParam":"k[-_0-9A-Za-z]{2}fmPxho[-_0-9A-Za-z]{3})[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{55}lLKPQ[-_0-9A-Za-z]{2}S"\})/\$1\$2/,domain=www.youtube.com
+/youtubei/v*/player?$replace=/("trackingParam":"k5DfmPxhoXpR)[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{151}lLKPQGiS"\})/\$1\$2/,domain=www.youtube.com
+/youtubei/v*/player?$replace=/("trackingParam":"kx_fmPxhoPZR)[-_0-9A-Za-z]{150}[-_0-9A-Za-z]+?([-_0-9A-Za-z]{55}lLKPQ-SS"\})/\$1\$2/,domain=www.youtube.com
 /yryy/css/javamy.js
 /yryy/css/javatop.js
 /yryy/css/venmy.js
@@ -11544,6 +11549,7 @@ baidu.com##.ec-ad
 baidu.com##.ec-ads-container
 baidu.com##.ec-fc-ad-results
 baidu.com##.ec-oad
+baidu.com##.ec-result-inner
 baidu.com##.ec_ad
 baidu.com##.ec_ad_results
 baidu.com##.ec_im_container
@@ -18484,6 +18490,7 @@ realty.ya.ru#%#//scriptlet('set-cookie', 'splash_banner_closed', '1')
 rebooo.com###gong
 receive-sms-online.info$$script[tag-content="other adblocking software"][max-length="600"]
 receive-sms-online.info$$script[wildcard="*document.getElementsByTagName*AdBlock*"][max-length="1200"]
+recipe-blog.jp##.app-banner
 recipe.rakuten.co.jp##.rakuten_recipe_app
 recipe.rakuten.co.jp##.rakuten_recipe_app__btn
 recotripp.com###is-app
@@ -18575,7 +18582,6 @@ rkanr.com##.bill
 rnd.de##div[class^="Articlestyled__"] div[data-testid="piano-container"]
 roadway.yahoo.co.jp###rc_app
 roblox.com###app-bumper-main
-robota.ua##alliance-shared-app-promo-banner
 romzhijia.net##.ggposition
 romzj.com##.sectionThree
 roomclip.jp##.HeaderApplink
@@ -38624,6 +38630,7 @@ zzzyk.com###Tinfo
 ||js.bju888.com^
 ||js.chetan.com^
 ||js.duotegame.com^
+||js.entm.top^
 ||js.eroticmv.com^
 ||js.fhxiaoshuo.com^
 ||js.hkslg520.com^
@@ -40520,6 +40527,7 @@ zzzyk.com###Tinfo
 ||lmrhhn.xyz^
 ||lmtnfl.xyz^
 ||lmx7.com^
+||lmxiqf.icu^
 ||lmxxxz.com^
 ||lmxzlb.xyz^
 ||ln0.com.cn^
@@ -44882,6 +44890,7 @@ zzzyk.com###Tinfo
 ||placingfinally.com^
 ||placingsolemnlyinexpedient.com^
 ||placoidtobyman.com^
+||plagiarismchecker.co/imgimg$image
 ||plainphilosophy.pro^
 ||plainsnudge.com^
 ||plainwrk.name^
@@ -47950,6 +47959,7 @@ zzzyk.com###Tinfo
 ||search.yahoo.co.jp^$removeparam=fr
 ||searchad-phinf.pstatic.net^$third-party
 ||searchdatestoday.com^
+||searchenginereports.net/theAdGMC/$image
 ||searchgear.pro^
 ||searchheader.xyz^$popup
 ||seashoreturn.com^$third-party
@@ -48084,6 +48094,7 @@ zzzyk.com###Tinfo
 ||sese277.info/photo/
 ||sesefu8.com/index.php?m=poster&
 ||sesefu8.com/statics/js/layer/layer.js
+||seslco.xyz^
 ||sessions.bugsnag.com^
 ||setbbts.cyou^
 ||setn.com/js/advertisement?
@@ -48702,7 +48713,7 @@ zzzyk.com###Tinfo
 ||smallestbiological.com^
 ||smallfo.com^
 ||smallfunnybears.com^
-||smallseotools.com/webimages/*.gif
+||smallseotools.com/webimages/a12/$image
 ||smart-flash.jp^$removeparam=rf
 ||smart-placements-sdk.ex.co^
 ||smart.idmnet.pl^$domain=eska.pl
@@ -49833,6 +49844,7 @@ zzzyk.com###Tinfo
 ||szmnf.cn^
 ||szmnk.cn^
 ||szmnl.cn^
+||szmnm.cn^
 ||szmns.cn^
 ||szmsao.com^
 ||szmtd.cn^
@@ -50063,6 +50075,7 @@ zzzyk.com###Tinfo
 ||tblr.pl/dyna/s.js
 ||tbpot.com^
 ||tbppfktchj.com^
+||tbpwrj.xyz^
 ||tbs1.xyz^
 ||tbtpezs.cn^
 ||tbudz.co.in^
@@ -50598,6 +50611,7 @@ zzzyk.com###Tinfo
 ||tlbjw.com^
 ||tldw.me^$third-party
 ||tlfurd.xyz^
+||tlfvj.cyou^
 ||tlhlpcb.xyz^
 ||tllfouwvkqza.com^
 ||tlprbzoi.com^
@@ -53758,6 +53772,7 @@ zzzyk.com###Tinfo
 ||wwgqqq.com^
 ||wwhnjrg.com^
 ||wwhsxwow.xyz^
+||wwjtdjj.cn^
 ||wwkh9ku.xyz^
 ||wwnyubs.cn^
 ||wwoglde.top^
@@ -54785,6 +54800,7 @@ zzzyk.com###Tinfo
 ||xubb.xyz^
 ||xuchangmuying.com^
 ||xucyufv.icu^
+||xudarl.xyz^
 ||xudgjz.xyz^
 ||xue.zbyw.cn^
 ||xueaaai.cn^
