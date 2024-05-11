@@ -1,9 +1,9 @@
-! Checksum: 18QxwqJcHkaabFyaXD6qxA
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1715402015-3600.patch
+! Checksum: /Vux4eXGJVZVRdJQe0iuhA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1715448819-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.35.8
-! TimeUpdated: 2024-05-11T04:31:14+00:00
+! Version: 2.3.35.16
+! TimeUpdated: 2024-05-11T17:31:14+00:00
 ! Expires: 5 days (update frequency)
 ||buyvisblog.com^$all
 ||fnlojkpbe.com^
@@ -5054,6 +5054,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ad_request.js
 /ad_request.php
 /ad_right.
+/ad_rotator/*$image,script,domain=~spokane.exchange
 /ad_server.
 /ad_side.
 /ad_skyscraper.gif
@@ -5214,9 +5215,9 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /adv.css?
 /adv_2.
 /adv_468.
-/adv_ads_v3/relatedAds/*
 /adv_banner_
 /adv_teasers.js
+/AdvAdsV3/*$script,stylesheet
 /advanced-ads-$domain=~wordpress.org
 /advert.$~script,~xmlhttprequest,domain=~advert.ae|~advert.club|~advert.com.tr|~advert.ee|~advert.ge|~advert.io|~advert.media|~advert.org.pl|~motortrader.com.my
 /advert01.
@@ -5315,7 +5316,6 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /banners/aff.
 /banners/affil/*$image
 /banners/affiliate/*$image
-/bannersAds_
 /bottomad.png
 /bsa-plugin-pro-scripteo/frontend/js/script.js
 /bsa-pro-scripteo/frontend/js/script.js
@@ -5423,6 +5423,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /img/aff/*
 /img_ad/*$image,domain=~daily.co.jp|~ehonnavi.net
 /in/show/?mid=$third-party
+/include/ad/*$script
 /include/ad_
 /includes/ads/*$script
 /index-ad-
@@ -5465,6 +5466,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /mobile_ad.
 /mobileads.
 /mod_ijoomla_adagency_zone/*$~xmlhttprequest
+/mod_pagepeel_banner/*$image,script
 /module/ads/*
 /modules/ad/*
 /modules/ads/*
@@ -5495,9 +5497,9 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /pagead/gen_
 /pagead/lvz?
 /pagead/osd.
+/pageear/*$script
 /pagepeel.
 /partner-ad-
-/partner_ads/*
 /partnerad.
 /partnerads/*
 /partneradwidget.
@@ -5508,7 +5510,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /pfe/current/*$third-party
 /phpads/adx.js
 /phpadsnew/*$image,script
-/phpbb_ads/*
+/phpbb_ads/*$~xmlhttprequest
 /pix/ads/*$image
 /pixel/puclc?
 /pixel/pure
@@ -5520,7 +5522,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /plugins/adrotate-pro/*
 /plugins/adrotate/*$script
 /plugins/ads-
-/plugins/ads/*
+/plugins/ads/*$~xmlhttprequest
 /plugins/adsanity-
 /plugins/advanced-ads/*$domain=~wordpress.org
 /plugins/ane-preroll-
@@ -5571,7 +5573,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /radioAdEmbed.
 /radioAdEmbedGPT.
 /RdmAdFeed.js
-/RealMedia/ads/adstream_
+/RealMedia/ads/*$~xmlhttprequest
 /redirect/?spot_id=
 /redirect?tid=
 /reklam.$domain=~github.com|~reklam.com.tr
@@ -5583,7 +5585,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /reklama3.png
 /reklama4.jpg
 /reklama4.png
-/reklame/*
+/reklame/*$~xmlhttprequest
 /ren.gif?
 /report_ad.js
 /resources/ads/*
@@ -5617,6 +5619,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /showban.asp?
 /showbanner.js
 /side-ads-
+/side_ads/*$~xmlhttprequest
 /sidead.
 /sidead1.js
 /sideads.js
@@ -6338,6 +6341,7 @@ _800x80_
 ||3lift.com^
 ||3myad.com^
 ||3twentyfour.xyz^
+||43ors1osh.com^
 ||43sjmq3hg.com^
 ||46f4vjo86.com^
 ||47c8d48301.com^
@@ -6372,6 +6376,7 @@ _800x80_
 ||69b61ba7d6.com^
 ||69i.club^
 ||69v.club^
+||6b856ee58e.com^
 ||6ec7e42994.com^
 ||6hdw.site^
 ||6ujk8x9soxhm.com^
@@ -7380,6 +7385,7 @@ _800x80_
 ||bbkydnakc.com^
 ||bbrdbr.com^
 ||bcaquzxajka.com^
+||bcfimttr.com^
 ||bchkhtyns.com^
 ||bclikeqt.com^
 ||bcloudhost.com^
@@ -8575,6 +8581,7 @@ _800x80_
 ||dandelionnoddingoffended.com^
 ||danesuffocate.com^
 ||dangeridiom.com^
+||dangerousratio.pro^
 ||dantbritingd.club^
 ||daphnews.com^
 ||dappaa.site^
@@ -11086,6 +11093,7 @@ _800x80_
 ||kz2oq0xm6ie7gn5dkswlpv6mfgci8yoe3xlqp12gjotp5fdjxs5ckztb8rzn.codes^
 ||kzasoaub.com^
 ||kzt2afc1rp52.com^
+||kzzwi.com^
 ||l-iw.de^
 ||l1native.com^
 ||labadena.com^
@@ -11362,6 +11370,7 @@ _800x80_
 ||louderwalnut.com^
 ||loudlongerfolk.com^
 ||lougougauhi.xyz^
+||louisedistanthat.com^
 ||loukoost.net^
 ||louloapi.com^
 ||loulouly.net^
@@ -11755,6 +11764,7 @@ _800x80_
 ||moduledescendantlos.com^
 ||modulepush.com^
 ||moera.xyz^
+||moetconfisk.top^
 ||mofettecalmed.com^
 ||moistenmanoc.com^
 ||mokotoparch.top^
@@ -12107,6 +12117,7 @@ _800x80_
 ||nossairt.net^
 ||nostrilquarryprecursor.com^
 ||notablechemistry.pro^
+||noted-factor.pro^
 ||notepastaparliamentary.com^
 ||notesbook.in^
 ||notesrumba.com^
@@ -12617,6 +12628,7 @@ _800x80_
 ||partnerlinks.io^
 ||parttimelucidly.com^
 ||pasbstbovc.com^
+||pasjcutadak.com^
 ||paslsa.com^
 ||passelsylvius.top^
 ||passeura.com^
@@ -13240,6 +13252,7 @@ _800x80_
 ||pxltrck.com^
 ||pycvlnu.com^
 ||pygopodwrytailbaskett.sbs^
+||pyknrhm5c.com^
 ||pyrroylceriums.com^
 ||pyxiscablese.com^
 ||q1mediahydraplatform.com^
@@ -13814,6 +13827,7 @@ _800x80_
 ||sabercuacro.org^
 ||sabotedrecedes.com^
 ||sackbarngroups.com^
+||sackerskips.com^
 ||sacsshela.com^
 ||sadbasindinner.com^
 ||sadjklq.com^
@@ -14727,6 +14741,7 @@ _800x80_
 ||therapistcrateyield.com^
 ||thereuponprevented.com^
 ||thermometerdoll.com^
+||thermometerinconceivablewild.com^
 ||thesisadornpathetic.com^
 ||thesisreducedo.com^
 ||thetchaixoo.com^
@@ -15411,6 +15426,7 @@ _800x80_
 ||videoaccess.xyz^
 ||videobaba.xyz^
 ||videocampaign.co^
+||videocdnshop.com^
 ||videoplaza.tv^
 ||videosprofitnetwork.com^
 ||videosworks.com^
@@ -15574,6 +15590,7 @@ _800x80_
 ||wavimurcavaqd.com^
 ||waxbushengore.com^
 ||waxingcesti.com^
+||wazduzrhiki.com^
 ||wbidder.online^
 ||wbidder311072023.com^
 ||wbilvnmool.com^
@@ -15721,6 +15738,7 @@ _800x80_
 ||withdrawdose.com^
 ||withdrawwantssheep.com^
 ||withinsdraco.com^
+||withnimskither.com^
 ||witnessjacket.com^
 ||witnessremovalsoccer.com^
 ||wizardunstablecommissioner.com^
@@ -16006,6 +16024,7 @@ _800x80_
 ||yfkflfa.com^
 ||yfykzbhaiuzbht.com^
 ||ygkwjd.xyz^
+||ygvqughn.com^
 ||yhbcii.com^
 ||yidbyhersle.xyz^
 ||yieldlab.net^
@@ -16062,6 +16081,7 @@ _800x80_
 ||yourwebbars.com^
 ||yourwownewz.com^
 ||yowpalt.top^
+||yptjqrlbawn.xyz^
 ||yqmxfz.com^
 ||ysesials.net^
 ||yspecjbjmcub.com^
@@ -16982,6 +17002,7 @@ _800x80_
 ||b9f25b.site^$document,popup
 ||bcbe.site^$document,popup
 ||ca3d.site^$document,popup
+||ca9246.xyz^$document,popup
 ||d84bc26d.site^$document,popup
 ||e076.xyz^$document,popup
 ||ec44.site^$document,popup
@@ -17056,7 +17077,6 @@ _800x80_
 ||bobgames-prolister.com^$popup
 ||bouhoagy.net^$popup
 ||brokennails.org^$popup
-||bttn.io^$popup
 ||casefyparamos.com^$popup
 ||catukhyistke.info^$popup
 ||caulisnombles.top^$popup
@@ -17161,6 +17181,7 @@ _800x80_
 ||loaksandtheir.info^$popup
 ||looksdashboardcome.com^$popup
 ||lorswhowishe.com^$popup
+||louisedistanthat.com^$popup
 ||luckiersandia.top^$popup
 ||ma3ion.com^$popup
 ||mamoth-deals.com^$popup
@@ -17196,7 +17217,6 @@ _800x80_
 ||postback1win.com^$popup
 ||preparedfile.com^$popup
 ||pretrackings.com^$popup
-||prf.hn^$popup
 ||profitablegatecpm.com^$popup
 ||prwave.info^$popup
 ||ptudoalistoy.net^$popup
@@ -17412,7 +17432,7 @@ _800x80_
 ||bidder.criteo.com^
 ||bidder.newspassid.com^
 ||bids.concert.io^
-||bit.ly^$script,domain=dailyuploads.net
+||bit.ly^$script,domain=dailyuploads.net|freeshot.live
 ||bs-adserver.b-cdn.net^
 ||bunkrr.su/lazyhungrilyheadlicks.js
 ||c.bannerflow.net^
@@ -17992,6 +18012,7 @@ _800x80_
 ||wiztube.xyz/banner/
 /resolver/api/resolve/v3/config/?$xmlhttprequest,domain=msn.com
 ||1337x.vpnonly.site^
+||absoluteanime.com/!bin/skin3/ads/
 ||ad.imp.joins.com^
 ||ad.khan.co.kr^
 ||ad.kissanime.com.ru^
@@ -18059,6 +18080,7 @@ _800x80_
 ||gpt.mail.yahoo.net/sandbox$subdocument,domain=mail.yahoo.com
 ||healthcentral.com/common/ads/generateads.js
 ||hontent.powzers.lol^
+||hubcloud.day/video/bn/
 ||iceinspace.com.au/iisads/
 ||iconfinder.com/static/js/istock.js
 ||igg-games.com/maven/
@@ -18077,6 +18099,7 @@ _800x80_
 ||koreatimes.co.kr/ad/
 ||latestlaws.com/frontend/ads/
 ||linkedin.com/tscp-serving/
+||lontent.powzerz.lol^
 ||machineseeker.com/data/ofni/
 ||mail-ads.google.com^
 ||mail.aol.com/d/gemini_api/?adCount=
@@ -18142,6 +18165,7 @@ _800x80_
 ||wikihow.com/x/zscsucgm?
 ||wsj.com/asset/ace/ace.min.js
 ||x.castanet.net^
+||xingcdn.com/crate/ad-
 ||xingcdn.com/xas/
 ||xinhuanet.com/s?
 ||yahoo.com/sdarla/
@@ -18411,6 +18435,7 @@ $websocket,domain=pornhub.com|redtube.com|redtube.com.br|tube8.com|tube8.es|tube
 |http*://*?$popup,third-party,domain=forums.socialmediagirls.com|pornhub.com|redtube.com|tube8.com|youporn.com|youporngay.com
 ||boyfriendtv.com/out/bg-$popup
 ||nhentai.net/api/_/popunder?$popup
+||t.ly^$popup,domain=veev.to
 $popup,third-party,domain=hentai2read.com|porn-tube-club.com
 @@||4cdn.org/adv/$image,xmlhttprequest,domain=4channel.org
 @@||accuweather.com/bundles/prebid.$script
