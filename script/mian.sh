@@ -7,8 +7,7 @@ curl -o i-3.txt https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.tx
 curl -o i-4.txt https://raw.githubusercontent.com/damengzhu/abpmerge/main/EasyListnoElementRules.txt
 curl -o i-5.txt https://filters.adtidy.org/android/filters/20_optimized.txt
 curl -o i-6.txt https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-curl -o i-7.txt https://filters.adtidy.org/android/filters/17_optimized.txt
-curl -o i-8.txt http://sub.adtchrome.com/adt-chinalist-easylist.txt
+curl -o i-7.txt https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/base/%E5%85%B6%E4%BB%96.prop
 
 # 合并规则并去除重复项
 cat i*.txt > i-mergd.txt
