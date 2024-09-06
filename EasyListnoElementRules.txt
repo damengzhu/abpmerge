@@ -1,9 +1,9 @@
-! Checksum: ZHyzclTh9ME2kPkAIBWh/w
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1725608206-3600.patch
+! Checksum: LCO/HoibHmGcq5kVoo9gOQ
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1725647778-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.51.48
-! TimeUpdated: 2024-09-06T07:31:23+00:00
+! Version: 2.3.51.57
+! TimeUpdated: 2024-09-06T18:31:17+00:00
 ! Expires: 5 days (update frequency)
 ||injectshrslinkblog.com^$third-party
 ||esasaimpi.net^
@@ -1393,6 +1393,7 @@ lascimmiapensa.com,mangapt.com,ottverse.com,agorablog.it,apfelpatient.de,opencul
 !+ NOT_OPTIMIZED
 !+ NOT_OPTIMIZED
 ||npttech.com/advertising.js$important,script,redirect=noopjs,domain=~vijesti.me
+$cookie=__adblocker,domain=slate.com|thehindubusinessline.com
 filmvilag.me,liderendeportes.com,serieskao.tv,ac24.cz,nsfwyoutube.com,hesgoal.com,igg-games.com,ukhello.info,uaclips.com,thodkyaat.com,kzclip.com,onlymen.cz,ultimasnoticias.com.ve,ibb.co$$script[wildcard="*track*atob*ShadowRoot*"][min-length="5000"][max-length="10000"]
 ukposts.info,ruplayers.com$$script[tag-content="insertAdjacentHTML"]
 !+ NOT_OPTIMIZED
@@ -2087,6 +2088,7 @@ deloplen.com$$script[max-length="0"]
 !+ NOT_OPTIMIZED
 !+ NOT_OPTIMIZED
 ||banner.mob.hr^
+||storage.googleapis.com/adf-pmmm/impublishertag.repeater.js
 @@||aktualne.cz/embed_iframe/$csp=child-src *
 @@||cz.mrezadosa.com^$xmlhttprequest,image,domain=playzone.cz
 /bundle_js.ashx$replace=/function\(\){try{if\(\(eval\(atob[\s\S]*?}}}\,/function(){}\,/,domain=mobilmania.cz
@@ -2297,6 +2299,7 @@ calciomercato.com$$script[tag-content="new FuckAdBlock"][max-length="30000"]
 ||tajrobe.wiki/images/ads/
 ||cdn.questvert.pl/publishers/*/qpscript.js
 ||niestatystyczny.pl/wp-content/cache/autoptimize/js/autoptimize_single_2343f262534a03ee11866211f8a8792f.js
+||rmf24.pl/j/videojs/ad-setup.js
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=halorzeszow.pl
 !+ NOT_OPTIMIZED
 @@||miastko24.pl/pl/js/trustmeimadolphin
@@ -5358,7 +5361,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ad.cgi?
 /ad.css?$stylesheet
 /ad.html?
-/ad.min.
+/ad.min.js$script,domain=~qoly.jp
 /ad/a.aspx?
 /ad/dfp/js/dfp.js
 /ad/image/*$image
@@ -5404,7 +5407,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /adimage.$image,script,stylesheet
 /adimages.$script
 /adj.php?
-/adjs.php
+/adjs.php$script
 /adlib.min.js
 /adlog.php
 /admanager.js
@@ -5420,7 +5423,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ads-250.$image
 /ads-common.$image,script
 /ads-front.min.js
-/ads-frontend.min.js
+/ads-frontend.min.js$script
 /ads-home.js
 /ads-rectangle.
 /ads-right.
@@ -5436,7 +5439,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ads/gam_prebid-$script
 /ads/image/*$image
 /ads/images/*$image,domain=~eoffcn.com
-/ads/index.
+/ads/index.$~xmlhttprequest
 /ads/leaderboard-$~xmlhttprequest
 /ads/leaderboard.
 /ads/outbrain?
@@ -5487,7 +5490,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /adsmanager/*$domain=~adsmanager.facebook.com|~github.com
 /AdsPlugin.
 /adsrv.
-/adsscript.
+/adsscript.$script
 /adsserv.
 /adsserver.
 /adsservice.
@@ -5503,7 +5506,6 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /adunits.
 /adutil.
 /adv-banner-$image
-/adv-mobile.
 /adv-scroll.
 /adv.css?
 /adv_468.
@@ -5523,6 +5525,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /advrotator.js
 /advtBanner.
 /adx2.
+/adz/js/adz.$script
 /aff_ad?$script
 /affad?
 /affiliate/banner/*$image
@@ -5532,6 +5535,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ak-ads-ns.
 /amazon-ad-link-$stylesheet
 /amp-ad-$script
+/amp4ads-host-v0.js$script
 /ane-popup-banner.js
 /annonser.
 /api-ads.
@@ -5662,12 +5666,12 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /nwm-fcn.min.js
 /nwm-pw2.min.js
 /nxst-advertising/dist/htlbid-advertising.min.js
+/oiopub-direct/js.php$script
 /oncc-ad.js
 /openads.js
 /owa.MessageAdList.
 /p8network.js
 /p?zoneId=
-/page-ads.
 /page-links-to/dist/new-tab.js
 /page-peel$~xmlhttprequest
 /pagead/1p-user-list/*$image
@@ -5764,7 +5768,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /serveads.php
 /servlet/view/*$script
 /sft-prebid.js
-/show-ad.js
+/show-ad.js$script
 /show_ad.js
 /show_ad?
 /showban.asp?
@@ -5777,12 +5781,13 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /skinad.
 /skyadright.
 /skyscraperad.
+/slider_ad.js$script
 /sliderad.js$script
 /small_ad.
 /soralink.js
 /sp/delivery/js.php
 /spacedesc=
-/spc.php
+/spc.php?$script
 /spcjs.php$script
 /sponsorad.jpg$image
 /sponsored-links.
@@ -5793,6 +5798,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /sponsoredlinks?
 /static.ad.
 /stickyads.js
+/style_ad.css$stylesheet
 /suv4.js
 /suv5.js$third-party
 /taboola-footer.js
@@ -5803,14 +5809,12 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /tncms/ads/*$script
 /tnt.ads.
 /top-ad.
-/top-ads.
 /top_ad.
 /top_ads.
 /ut.js?cb=
 /utx?cb=$third-party
 /v3/ads?
 /vghd.gif
-/video-ad-overlay.
 /video-ad.
 /video-ads-player.
 /video.ads.
@@ -5823,7 +5827,6 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /view/ad/*$subdocument
 /virtuagirlhd.
 /web_ads/*$image
-/webads.js
 /webads/*$image,domain=~cccc.edu|~meatingplace.com
 /welcome_ad.js
 /wp-auto-affiliate-links/*$script,stylesheet
@@ -6028,7 +6031,6 @@ _prebid8.
 /jquery.peelback.
 -adblocker-detection/
 -detect-adblock.
-/abtest_ab.js
 /ad-blocking-advisor/*$script,stylesheet
 /adb_detector.
 /adblock-detect.
@@ -7498,6 +7500,7 @@ _800x80_
 ||bewathis.com^
 ||bexinruwlkwe.com^
 ||beylicbesmile.com^
+||bezwtpxx.com^
 ||bf-ad.net^
 ||bfxytxdpnk.com^
 ||bg4nxu2u5t.com^
@@ -7742,6 +7745,7 @@ _800x80_
 ||bruisedpaperworkmetre.com^
 ||brunchcreatesenses.com^
 ||bruntstabulae.com^
+||brutishlylifevoicing.com^
 ||brygella.com^
 ||bsbrcdna.com^
 ||bsginiha.com^
@@ -7937,6 +7941,7 @@ _800x80_
 ||ceasechampagneparade.com^
 ||ceasedheave.com^
 ||ceaslesswisely.com^
+||ceethipt.com^
 ||cegloockoar.com^
 ||celebnewsuggestions.com^
 ||celeritascdn.com^
@@ -8507,6 +8512,7 @@ _800x80_
 ||detour.click^
 ||dewincubiatoll.com^
 ||dexpredict.com^
+||dezaleyarmless.com^
 ||dfd55780d6.com^
 ||dfdgfruitie.xyz^
 ||dffa09cade.com^
@@ -8855,6 +8861,7 @@ _800x80_
 ||emxdgt.com^
 ||encirclesheriffemit.com^
 ||encloselavanga.com^
+||encounterponder.com^
 ||encumberbiased.com^
 ||endowmentoverhangutmost.com^
 ||endream.buzz^
@@ -9069,6 +9076,7 @@ _800x80_
 ||fenacheaverage.com^
 ||fencersdatcha.com^
 ||fer2oxheou4nd.com^
+||ferrmidline.com^
 ||feuageepitoke.com^
 ||feuingcrche.com^
 ||fexyop.com^
@@ -9258,6 +9266,7 @@ _800x80_
 ||funappgames.com^
 ||fundatingquest.fun^
 ||funestjacket.shop^
+||fungiaoutfame.com^
 ||funyarewesbegi.com^
 ||furnermousers.click^
 ||furtherbasketballoverwhelming.com^
@@ -10170,6 +10179,7 @@ _800x80_
 ||jarvispopsu.com^
 ||jatchough.com^
 ||jatfugios.com^
+||jatobaviruela.com^
 ||jatosbathkol.com^
 ||javabsence11.fun^
 ||javgenetic11.fun^
@@ -11219,6 +11229,7 @@ _800x80_
 ||nextmillmedia.com^
 ||nextpsh.top^
 ||nezygmobha.com^
+||ngfycrwwd.com^
 ||ngjeaizqad.com^
 ||ngrjmdqvqk.com^
 ||ngsggarznc.com^
@@ -11740,6 +11751,7 @@ _800x80_
 ||pefeyyuguqsg.com^
 ||peglikedioecia.com^
 ||pejzeexukxo.com^
+||pekseerdune.xyz^
 ||pelamydlours.com^
 ||peliastitters.com^
 ||pelletslimosa.com^
@@ -12077,6 +12089,7 @@ _800x80_
 ||psotudev.com^
 ||psuftoum.com^
 ||psykterfaulter.com^
+||ptailadsol.net^
 ||ptaimpeerte.com^
 ||ptaixout.net^
 ||ptatexiwhe.com^
@@ -12325,6 +12338,7 @@ _800x80_
 ||rbtwo.bid^
 ||rbukrgxwqup.com^
 ||rbxh2wukx.com^
+||rchmupnlifo.xyz^
 ||rcvlink.com^
 ||rcvlinks.com^
 ||rczmdeuahn.com^
@@ -12362,6 +12376,7 @@ _800x80_
 ||recordervesttasting.com^
 ||redansediles.com^
 ||redbaygazel.com^
+||reddockbedman.com^
 ||redirectingat.com^
 ||redrotou.net^
 ||redvil.co.in^
@@ -12722,6 +12737,7 @@ _800x80_
 ||scl6gc5l.site^
 ||scnd-tr.com^
 ||sconvtrk.com^
+||scotergushing.com^
 ||scotianosed290noelind.com^
 ||scotizeoperae.com^
 ||scptp1.com^
@@ -15135,6 +15151,7 @@ _800x80_
 ||89407765.xyz^$document,popup
 ||89871256.xyz^$document,popup
 ||91301246.xyz^$document,popup
+||94597672.xyz^$document,popup
 ||98383163.xyz^$document,popup
 ||a908a849.xyz^$document,popup
 ||b395bfcd.xyz^$document,popup
@@ -15181,7 +15198,9 @@ _800x80_
 ||block-ad.com^$popup
 ||blogostock.com^$popup
 ||bmjidc.xyz^$popup
+||brutishlylifevoicing.com^$popup
 ||buyvisblog.com^$popup
+||ceethipt.com^$popup
 ||cherrytv.media^$popup
 ||clobberprocurertightwad.com^$popup
 ||clunen.com^$popup
@@ -15262,6 +15281,7 @@ _800x80_
 ||pro-adblocker.com^$popup
 ||processsky.com^$popup
 ||pronouncedlaws.com^$popup
+||ptailadsol.net^$popup
 ||questioningexperimental.com^$popup
 ||raunooligais.net^$popup
 ||rdtracer.com^$popup
