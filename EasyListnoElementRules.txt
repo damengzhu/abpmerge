@@ -1,9 +1,9 @@
-! Checksum: rNCINqxuhoDnbJj50ZYYYA
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1725694579-3600.patch
+! Checksum: OfNT2I7OdJNDe1d4oPa8WQ
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1725723402-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.51.66
-! TimeUpdated: 2024-09-07T07:31:20+00:00
+! Version: 2.3.51.72
+! TimeUpdated: 2024-09-07T15:31:17+00:00
 ! Expires: 5 days (update frequency)
 ||injectshrslinkblog.com^$third-party
 ||esasaimpi.net^
@@ -5331,7 +5331,6 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /_xa/ads?
 /a/display.php?$script
 /ad-125.
-/ad-bottom.
 /ad-choices-$image
 /ad-choices.
 /ad-scroll.js$script
@@ -5371,6 +5370,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ad_server.cgi$subdocument
 /ad_side.$~xmlhttprequest
 /ad_skyscraper.gif$image
+/ad_top.jpg$image
 /ad_top.js
 /adaptive_components.ashx?type=ads&
 /adbanners/*$image
@@ -5390,6 +5390,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /admanager/*$~object,domain=~admanager.line.biz|~blog.google|~sevio.com
 /admgr.js
 /admitad.js
+/adpartner.min.js$script
 /adplayer.$script,domain=~adplayer.pro
 /adplugin.
 /adpopup.js
@@ -5397,13 +5398,13 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /adriver.$~script,domain=~adriver.co
 /ads-250.$image
 /ads-common.$image,script
-/ads-front.min.js
+/ads-front.min.js$script
 /ads-frontend.min.js$script
 /ads-rectangle.
 /ads-right.
 /ads-vast-vpaid.js
 /ads.bundle.js
-/ads.jplayer.
+/ads.jplayer.$stylesheet
 /ads.jsp
 /ads/300.$subdocument
 /ads/acctid=
@@ -5418,11 +5419,14 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ads/leaderboard.
 /ads/outbrain?
 /ads/popup.
+/ads/revgen.$script
 /ads/serve?
 /ads/show.$script
+/ads/slideup.$script
 /ads/spacer.
 /ads/square.
 /ads/ta_wppas/*$third-party
+/ads/video/*$script
 /ads/xtcore.
 /ads1.
 /ads160.
@@ -5436,12 +5440,10 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /ads?param=
 /ads?zone=
 /ads?zone_id=
-/ads_300.
 /ads_bg.$image
 /ads_frame.
 /ads_iframe.$subdocument
 /adsAPI.js$script
-/adsbanner.
 /adsbanner/*$image
 /adscontroller.js
 /adserv.$script
@@ -5452,19 +5454,18 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /adserver?
 /adserving.
 /adsforwp-front.min.css
-/adsheader.
 /adsimages/*$image,domain=~bdjobstoday.com
 /adsimg/*$image
 /adsinclude.
+/adslide.js$script
 /adsmanager.nsf/*$image
 /adsmanager/*$domain=~adsmanager.facebook.com|~github.com
 /AdsPlugin.
 /adsrv.
 /adsscript.$script
 /adsserv.
-/adsserver.
 /adsservice.
-/adstracking.
+/adsTracking.$script
 /adstream.
 /adswrapper.
 /adtech;
@@ -5514,13 +5515,11 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /arcads.js$script
 /assets/ads/*$~image,domain=~outlook.live.com
 /asyncjs.php$script
-/asyncspc.php
+/asyncspc.php$third-party
 /auto.ad.
 /awaps-ad-sdk-$script
 /awe2.js
 /ban.php?
-/ban300.html
-/ban728.html
 /ban728.php
 /ban728x90.$image
 /banner-ads-rotator/*$script,stylesheet
@@ -5561,21 +5560,24 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /dmcads_$script
 /doubleclick.min
 /drsup-admanager-ajax.js$script
+/ec5bcb7487ff.js$script
+/exitpop.js$script
 /exitpopup.js$script
 /exobanner.
 /exoclick.$~script,domain=~exoclick.bamboohr.co.uk|~exoclick.kayako.com
 /expads-blocked.js
+/exports/tour_20/*$subdocument
 /external_ads.
 /flashad.asp$subdocument
 /flashads.$domain=~flashads.co.id
 /fleshlight.$domain=~fleshlight.com|~fleshlight.zendesk.com
 /fload.js
 /floatads.
-/floatingad.js
+/floatingad.js$script
 /footer_ad.js
 /footerads.
 /fro_lo.js
-/frontend_loader.js
+/frontend_loader.js$script
 /ftt2/js.php
 /gdpr-ad-script.js
 /get/?go=1&data=
@@ -5600,15 +5602,18 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /img_ad/*$image,domain=~daily.co.jp|~ehonnavi.net
 /infinity.js.aspx?
 /jquery.ad.js$script
-/jquery.adx.js
-/jquery.dfp.js
+/jquery.adi.js$script
+/jquery.adx.js$script
+/jquery.dfp.js$script
 /js.ad/size=
 /js3caf.js
 /jsad.php
-/jsAds-1.4.min.js
+/jsAds-1.4.min.js$script
 /jspopunder.min.js$script
 /keyade.js
-/lazyad-loader.min.js
+/lazyad-loader.js$script
+/lazyad-loader.min.js$script
+/leftad.js$script
 /leftad.png
 /li.blogtrottr.com/imp?
 /livejasmin.$domain=~livejasmin.com
@@ -5625,11 +5630,11 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /modules/ads/*$~xmlhttprequest
 /mysimpleads/mysa_output.php$script
 /nativead.
-/nativeads.js
+/nativeads.js$script
 /nativeads/script/*$script
 /nativebanner/ane-native-banner.js$script
+/new/floatadv.js$script
 /ntv.json?key=
-/nugg.min.js
 /nwm-fcn.min.js
 /nwm-pw2.min.js
 /nxst-advertising/dist/htlbid-advertising.min.js
@@ -5646,7 +5651,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /pagead/lvz?
 /pagead/osd.
 /pageear.js$script
-/pagepeel.
+/pagepeel.$~xmlhttprequest
 /partneradwidget.
 /partnerbanner.$domain=~toltech.cn
 /partners/ads/*$image
@@ -5692,6 +5697,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /publicidade/*$~xmlhttprequest
 /publicidades/*$~xmlhttprequest
 /pustrck.js
+/rad_singlepageapp.js$script
 /radioAdEmbed.
 /radioAdEmbedGPT.
 /RdmAdFeed.js
@@ -5745,9 +5751,10 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /size=*/random=*/viewid=
 /skyadright.
 /skyscraperad.
+/slide_in_ads_close.gif$image
 /slider_ad.js$script
 /sliderad.js$script
-/small_ad.
+/small_ad.$image,domain=~eh-ic.com
 /sp/delivery/js.php
 /spc.php?$script
 /spcjs.php$script
@@ -5758,12 +5765,13 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /sponsored_text.
 /sponsoredlinks.
 /static.ad.
-/stickyads.js
+/stickyads.js$script
 /style_ad.css$stylesheet
-/suv4.js
+/suv4.js$third-party
 /suv5.js$third-party
-/taboola-footer.js
-/taboola-header.js
+/taboola-footer.js$script
+/taboola-header.js$script
+/taboola_8.9.1.js$script
 /targetingAd.js
 /theologicalpresentation.com/*
 /tmbi-a9-header-$script
@@ -5778,7 +5786,6 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 /vghd.gif
 /video-ad.
 /video-ads-player.
-/video.ads.
 /video_ad.
 /video_ads.
 /video_slider3.js
@@ -5812,6 +5819,7 @@ iview.abc.net.au/programs$replace=/("type"\:"preroll")[\s\S]*("type")/"type"/
 ://ads.$~image,domain=~ads.8designers.com|~ads.ac.uk|~ads.adstream.com.ro|~ads.allegro.pl|~ads.am|~ads.amazon|~ads.apple.com|~ads.atmosphere.copernicus.eu|~ads.band|~ads.bestprints.biz|~ads.bikepump.com|~ads.brave.com|~ads.buscaempresas.co|~ads.business.bell.ca|~ads.cafebazaar.ir|~ads.colombiaonline.com|~ads.comeon.com|~ads.cvut.cz|~ads.doordash.com|~ads.dosocial.ge|~ads.dosocial.me|~ads.elevateplatform.co.uk|~ads.finance|~ads.google.cn|~ads.google.com|~ads.gree.net|~ads.gurkerl.at|~ads.harvard.edu|~ads.instacart.com|~ads.jiosaavn.com|~ads.kaipoke.biz|~ads.kazakh-zerno.net|~ads.kifli.hu|~ads.knuspr.de|~ads.listonic.com|~ads.magalu.com|~ads.mercadolivre.com.br|~ads.mgid.com|~ads.microsoft.com|~ads.midwayusa.com|~ads.mobilebet.com|~ads.mojagazetka.com|~ads.msstate.edu|~ads.mst.dk|~ads.mt|~ads.nc|~ads.nipr.ac.jp|~ads.olx.pl|~ads.pinterest.com|~ads.red|~ads.rohlik.cz|~ads.route.cc|~ads.safi-gmbh.ch|~ads.scotiabank.com|~ads.selfip.com|~ads.shopee.cn|~ads.shopee.co.th|~ads.shopee.com.br|~ads.shopee.com.mx|~ads.shopee.com.my|~ads.shopee.kr|~ads.shopee.ph|~ads.shopee.pl|~ads.shopee.sg|~ads.shopee.tw|~ads.shopee.vn|~ads.smartnews.com|~ads.snapchat.com|~ads.socialtheater.com|~ads.spotify.com|~ads.studyplus.co.jp|~ads.taboola.com|~ads.tiktok.com|~ads.typepad.jp|~ads.us.tiktok.com|~ads.viksaffiliates.com|~ads.vk.com|~ads.watson.ch|~ads.x.com|~ads.yandex|~badassembly.com|~caravansforsale.co.uk|~fusac.fr|~memo2.nl|~reempresa.org|~satmetrix.com|~seriouswheels.com
 ://ads2.
 ://adserver1.
+://adsserver.
 ://adv.$domain=~adv.asahi.com|~adv.bet|~adv.blue|~adv.chunichi.co.jp|~adv.cincsys.com|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.design|~adv.digimatix.ru|~adv.ec|~adv.ee|~adv.gg|~adv.hokkaido-np.co.jp|~adv.kompas.id|~adv.lack-girl.com|~adv.mcr.club|~adv.mcu.edu.tw|~adv.michaelgat.com|~adv.msk.ru|~adv.neosystem.co.uk|~adv.peronihorowicz.com.br|~adv.rest|~adv.ru|~adv.tools|~adv.trinet.ru|~adv.ua|~adv.vg|~adv.yomiuri.co.jp|~advancedradiology.com|~advids.co|~farapp.com|~pracuj.pl|~r7.com|~typeform.com|~welaika.com
 ://affiliate.$third-party
 ://affiliates.$third-party
@@ -5958,8 +5966,8 @@ _widget_ad.
 /tardisrocinante/vitals.js$script
 -prebid/
 .prebid.$domain=~prebid.org
-/_js/prbd_6.19.0.js
 /gpt-prebid.js
+/pbjsandwichdirecta9-$script
 /porpoiseant/*$script
 /prebid-js-$script
 /prebid-min-$script
@@ -5989,16 +5997,13 @@ _prebid.js
 /adb_detector.
 /adblock-detect.
 /adblock-detector.
-/adblock-message.
 /adblock.gif?
-/adblock_detect.
 /adblock_detector.
 /adblock_detector2.
 /adblock_logger.$script
-/adblockdetect.
+/adblockdetect.js$script
 /adblockdetection.
 /adblocker-leader.
-/adblockkiller.
 /adbuddy.$domain=~adbuddy.be|~adbuddy.beeldstudio.be
 /ads-blocking-detector.
 /anti_ab.
@@ -6529,6 +6534,7 @@ _800x80_
 ||accuserutility.com^
 ||acdcdn.com^
 ||acdn923132475.com^
+||ace-adserver.com^
 ||acertb.com^
 ||achcdn.com^
 ||achievablecpmrevenue.com^
@@ -15063,6 +15069,7 @@ _800x80_
 ||78b78ff8.xyz^$document,popup
 ||83887336.xyz^$document,popup
 ||88129513.xyz^$document,popup
+||88545539.xyz^$document,popup
 ||89263907.xyz^$document,popup
 ||89407765.xyz^$document,popup
 ||89871256.xyz^$document,popup
@@ -15818,6 +15825,7 @@ _800x80_
 ||bernama.com/storage/banner/
 ||bettingads.365scores.com^
 ||biblehub.com/botmenu
+||bigsquidrc.com/wp-content/themes/bsrc2/js/adzones.js
 ||bitchute.com/static/ad-sidebar.html
 ||bitchute.com/static/ad-sticky-footer.html
 ||bordeaux.futurecdn.net^
@@ -15927,6 +15935,7 @@ _800x80_
 ||turbobit.net/pus/
 ||userscript.zone/s.js
 ||util-*.simply-hentai.com^
+||vectips.com/wp-content/themes/vectips-theme/js/adzones.js
 ||voodc.com/avurc
 ||wikihow.com/x/zscsucgm?
 ||wsj.com/asset/ace/ace.min.js
@@ -16059,6 +16068,7 @@ $popup,third-party,domain=1337x.buzz|720pstream.tv|adblockeronstape.me|adblocker
 ||go.stripchat.beeg.com^
 ||hellporno.com/_a_xb/
 ||hentaifox.com/js/slider.js
+||hentairider.com/banners/
 ||hornygamer.com/play_horny_games/
 ||i.imgur.com^$domain=hentaitube.icu
 ||iceporn.com/player_right_ntv_
@@ -16098,6 +16108,7 @@ $popup,third-party,domain=1337x.buzz|720pstream.tv|adblockeronstape.me|adblocker
 ||rtb-1.mylust.com^
 ||rule34.xxx/images/r34_doll.png
 ||rusdosug.com/Fotos/Banners/
+||service.iwara.tv/z/z.php
 ||sex3.com/ee/s/s/js/ssu
 ||sex3.com/ee/s/s/su
 ||sexvid.pro/rrt/
