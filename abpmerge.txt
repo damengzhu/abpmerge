@@ -2,8 +2,8 @@
 ! Title: ABP Merge Rules
 ! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，10007自用规则，EasyList no Element Rules，EasylistChina，EasylistLite，CJX'sAnnoyance，Adblock Warning Removal List
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2024-09-08 04:16:56
-! Total count: 52748
+! Version: 2024-09-08 16:19:20
+! Total count: 52779
 
 ###ADbox
 ###ADtip
@@ -725,6 +725,7 @@
 ##.ad-section
 ##.ad-shine-panel
 ##.ad-site
+##.ad-tabSplit
 ##.ad-text
 ##.ad-title
 ##.ad-top
@@ -759,6 +760,7 @@
 ##.adBlockNotification
 ##.adBlockNotificationOverlay
 ##.adBlockWarning
+##.adContainer
 ##.adContainer[style="margin-top: -5px"]
 ##.adDingT
 ##.adFrame
@@ -789,6 +791,7 @@
 ##.ad_block_detected
 ##.ad_block_off
 ##.ad_blocker
+##.ad_bot
 ##.ad_box
 ##.ad_btn
 ##.ad_content
@@ -885,6 +888,7 @@
 ##.ads-img
 ##.ads-item
 ##.ads-title + .article-bottom-apps
+##.ads.flex
 ##.ads02
 ##.ads03
 ##.ads1
@@ -1004,7 +1008,14 @@
 ##.adv-couplets
 ##.adv-g1
 ##.adv-overlay
+##.adv1
+##.adv2
 ##.adv250
+##.adv3
+##.adv4
+##.adv5
+##.adv6
+##.adv7
 ##.advInfoElem
 ##.adv_img
 ##.adv_left
@@ -1035,6 +1046,7 @@
 ##.app-abk
 ##.app-ad-container-desktop
 ##.app-down-fix.body-fix
+##.app-text > .main
 ##.appBanner:not(body)
 ##.appdownload_ad + .hider
 ##.appguide-wrap
@@ -1495,6 +1507,7 @@
 ##.guruin-ads
 ##.hao123-unionad-pic
 ##.happy_undie-mob
+##.hasFootAd
 ##.hbp > .wp_banner
 ##.hd-adv
 ##.head-ad
@@ -5106,7 +5119,6 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /^https?:\/\/xxximage\.org\/[a-z\d]+\.js$/$domain=xxximage.org
 /^https?:\/\/zoomgirls\.net\/[a-z\d]+\.(js)$/$domain=zoomgirls.net
 /_a_ta/s/s/*
-/_js/prbd_6.19.0.js
 /_xa/ads
 /_xa/ads?
 /_xa/ads_
@@ -5128,7 +5140,6 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /ad-blocking-advisor/*$script,stylesheet
 /ad-blocking-alert/*
 /ad-blocking-detector/*
-/ad-bottom.
 /ad-choices-$image
 /ad-choices.
 /ad-provider.
@@ -5309,6 +5320,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /ad_side.$~xmlhttprequest
 /ad_skyscraper.gif$image
 /ad_tag.
+/ad_top.jpg$image
 /ad_top.js
 /ad_top_
 /ad_unified_access?
@@ -5359,6 +5371,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /adblock_logger.$script
 /adblock_notify.js
 /adblockdetect.
+/adblockdetect.js$script
 /adblockdetect/*$~image
 /adblockdetection.
 /adblockdetectorwithga.
@@ -5422,6 +5435,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /admitad.js
 /admonitor.
 /adnow.js$domain=tvboxnow.com
+/adpartner.min.js$script
 /adpfile/*
 /adpic.
 /adpic/*
@@ -5441,14 +5455,14 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /ads-arc.
 /ads-blocking-detector.
 /ads-common.$image,script
-/ads-front.min.js
+/ads-front.min.js$script
 /ads-frontend.min.js$script
 /ads-rectangle.
 /ads-right.
 /ads-vast-vpaid.js
 /ads.bundle.js
 /ads.dp.js?
-/ads.jplayer.
+/ads.jplayer.$stylesheet
 /ads.js?
 /ads.jsp
 /ads.php
@@ -5475,11 +5489,14 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /ads/leaderboard.
 /ads/outbrain?
 /ads/popup.
+/ads/revgen.$script
 /ads/serve?
 /ads/show.$script
+/ads/slideup.$script
 /ads/spacer.
 /ads/square.
 /ads/ta_wppas/*$third-party
+/ads/video/*$script
 /ads/xtcore.
 /ads1.
 /ads160.
@@ -5495,7 +5512,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /ads?zone=
 /ads?zone_id=
 /adsAPI.js$script
-/ads_300.
+/adsTracking.$script
 /ads_bg.$image
 /ads_frame.
 /ads_iframe
@@ -5505,7 +5522,6 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /adsame.
 /adsame/*
 /adsame1.
-/adsbanner.
 /adsbanner/*$image
 /adscontroller.js
 /adscpc/*
@@ -5524,13 +5540,13 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /adserving.
 /adsfactor_ab
 /adsforwp-front.min.css
-/adsheader.
 /adshow.
 /adshow/*
 /adsimages/*$image,domain=~bdjobstoday.com
 /adsimg/*$image
 /adsinclude.
 /adsjs/*
+/adslide.js$script
 /adsmanager.nsf/*$image
 /adsmanager/*$domain=~adsmanager.facebook.com|~github.com
 /adsmatcher-anti-adblock/*
@@ -5540,10 +5556,8 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /adsrv.
 /adsscript.$script
 /adsserv.
-/adsserver.
 /adsservice.
 /adstatic/*
-/adstracking.
 /adstream.
 /adswrapper.
 /adswrapperintl.
@@ -5789,7 +5803,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /assets/sidebar/*$domain=v2ex.com
 /assets/t_j/tongji.js
 /asyncjs.php$script
-/asyncspc.php
+/asyncspc.php$third-party
 /attachment/freeaddon_banner/*
 /attachments/ad/*$domain=~edushida.com
 /auto.ad.
@@ -5804,8 +5818,6 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /baidu/189/999.php
 /baidu/tg.js
 /ban.php?
-/ban300.html
-/ban728.html
 /ban728.php
 /ban728x90.$image
 /banner-ad.
@@ -6037,6 +6049,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /e/cm?$subdocument
 /e/ecmsshop/zhuanpan/js/*
 /e/ir?$image,script
+/ec5bcb7487ff.js$script
 /eis/diy/ad/*
 /emailads/*
 /embed-ad-
@@ -6052,6 +6065,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /exads-adblock-3.10
 /excellence/ads/*
 /exchange_banner_
+/exitpop.js$script
 /exitpopunder.
 /exitpopunder_
 /exitpopup.
@@ -6060,6 +6074,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /exobanner.
 /exoclick.$~script,domain=~exoclick.bamboohr.co.uk|~exoclick.kayako.com
 /expads-blocked.js
+/exports/tour_20/*$subdocument
 /extendedadvert.
 /external/ad.
 /external/ad/*
@@ -6093,7 +6108,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /floatads.
 /floatadv.
 /floatcaopron.js
-/floatingad.js
+/floatingad.js$script
 /floatingcontent/*$third-party
 /flr.js$domain=8boobs.com|angelgals.com|babesinporn.com|fooxybabes.com|hotbabeswanted.com|hotstunners.com|mainbabes.com|nakedbabes.club|pleasuregirl.net|rabbitsfun.com|silkengirl.com|silkengirl.net
 /fn666/shouye.php
@@ -6109,7 +6124,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /frontend-jiucao/img/banner.jpg
 /frontend-jiucao/ps/*.gif
 /frontend-jiucao/ps/psCreat.js
-/frontend_loader.js
+/frontend_loader.js$script
 /fshow.php?id=$script,third-party
 /fsjghgwyegh_f.js
 /ftt2/js.php
@@ -6320,8 +6335,9 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /jianpian.obs.cn-
 /jianshen8/images/plan_banner_
 /jquery.ad.js$script
-/jquery.adx.js
-/jquery.dfp.js
+/jquery.adi.js$script
+/jquery.adx.js$script
+/jquery.dfp.js$script
 /jquery.modal.$domain=1909.me|8se.me
 /jquery.modal.$domain=1909.me|8se.me|litu100.xyz|xchina.co|xchina.fun|xchina.pro
 /jquery.peelback.
@@ -6432,7 +6448,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /js/yzgg.js
 /js/zb.js$script,third-party
 /js3caf.js
-/jsAds-1.4.min.js
+/jsAds-1.4.min.js$script
 /js_ad_utf8.
 /js_php/ajsf.php?id=$third-party
 /jsad.php
@@ -6463,7 +6479,8 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /lapi/sign/phonegameapi/getinfo
 /lapi/sign/signapi/getinfo
 /lapi/sign/web/getinfo
-/lazyad-loader.min.js
+/lazyad-loader.js$script
+/lazyad-loader.min.js$script
 /leadads/*
 /leader_ad.
 /leaderad.
@@ -6475,6 +6492,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /leaderboardadblock.
 /leaderboardads.
 /ledad.
+/leftad.js$script
 /leftad.png
 /lenovo/2021/all*.js
 /lenovo/pc/all*.js
@@ -6566,13 +6584,14 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /nForum/files/adv/*
 /nativead.
 /nativeads-
-/nativeads.js
+/nativeads.js$script
 /nativeads/script/*$script
 /nativebanner/ane-native-banner.js$script
 /nb/*$script,domain=bigtitslust.com|pornhex.com|159i.com|babesjoy.com|pornyfap.com|imgtorrnt.in|imgtornado.com|shameless.com|imgdone.com|webcamshows.org|ipicture.su|youav.com|porndr.com|noodlemagazine.com|picmoza.com|cumlouder.com|maturetubehere.com|amateur8.com|freeporn8.com
 /nb/ads/*
 /nb/f_ls.js
 /new/ads/*
+/new/floatadv.js$script
 /new/yinghua*/top.js$third-party,script
 /new/yinghuacd*/bottom.js$third-party,script
 /newAd/*
@@ -6586,7 +6605,6 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /nqnhfd/*.js
 /ntes-ad-cloud.
 /ntv.json?key=
-/nugg.min.js
 /nwm-fcn.min.js
 /nwm-pw2.min.js
 /nxst-advertising/dist/htlbid-advertising.min.js
@@ -6631,7 +6649,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /pagead2.
 /pagecpv/*
 /pageear.js$script
-/pagepeel.
+/pagepeel.$~xmlhttprequest
 /pages/ads
 /parsonsmaize/abilene.js$script
 /parsonsmaize/chanute.js$script
@@ -6642,6 +6660,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /partnerbanner.$domain=~toltech.cn
 /partners/ads/*$image
 /paypic/*
+/pbjsandwichdirecta9-$script
 /pc/Tpl/baibaipc//js/*
 /pc/Tpl/baibaipc/js/*
 /pcbeta\.com\/data\/cache\/(?:common)?_[a-z]{14}\.js\?/$script,~third-party,domain=pcbeta.com,match-case
@@ -6785,6 +6804,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /r/*?_r=$object,subdocument,third-party
 /r/t1/*$subdocument,third-party
 /r/video/*$domain=youxi.baidu.com
+/rad_singlepageapp.js$script
 /radioAdEmbed.
 /radioAdEmbedGPT.
 /rass7.$script,~third-party
@@ -6944,9 +6964,10 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /skyadright.
 /skyscraperad.
 /sl/assetlisting/?
+/slide_in_ads_close.gif$image
 /slider_ad.js$script
 /sliderad.js$script
-/small_ad.
+/small_ad.$image,domain=~eh-ic.com
 /smartpop/*$popup
 /smflow/get.*=gAdCallback_
 /sobt_adv.js
@@ -6985,20 +7006,21 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /statics/js/hth1111.html
 /statics/recommend/bense.gif
 /stats.php?adsid=$third-party
-/stickyads.js
+/stickyads.js$script
 /stuiA004/statics/asd/*
 /stui_ads/xyz456e/*
 /style_ad.css$stylesheet
 /sum.js$domain=freeporn8.com|sortporn.com|lesbian8.com|amateur8.com|bigtitslust.com|maturetubehere.com|shemalesin.com|3movs.com
 /sungg/*$domain=sun0769.com
-/suv4.js
+/suv4.js$third-party
 /suv5.js$third-party
 /svr/*.aspx?placeid=$third-party
 /svr/popwin.aspx?$third-party
 /sxgg/12.js
 /sxgg/13
-/taboola-footer.js
-/taboola-header.js
+/taboola-footer.js$script
+/taboola-header.js$script
+/taboola_8.9.1.js$script
 /taiyangchengjituantupian.
 /tan.js
 /tan1.js
@@ -7142,7 +7164,6 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /video-ad.
 /video-ads-player.
 /video-slider-ad/build.js
-/video.ads.
 /videoJS/video-conrtib-ads.js
 /video_ad.
 /video_ads.
@@ -8856,6 +8877,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 ://ads.$~image,domain=~ads.8designers.com|~ads.ac.uk|~ads.adstream.com.ro|~ads.allegro.pl|~ads.am|~ads.amazon|~ads.apple.com|~ads.atmosphere.copernicus.eu|~ads.band|~ads.bestprints.biz|~ads.bikepump.com|~ads.brave.com|~ads.buscaempresas.co|~ads.business.bell.ca|~ads.cafebazaar.ir|~ads.colombiaonline.com|~ads.comeon.com|~ads.cvut.cz|~ads.doordash.com|~ads.dosocial.ge|~ads.dosocial.me|~ads.elevateplatform.co.uk|~ads.finance|~ads.google.cn|~ads.google.com|~ads.gree.net|~ads.gurkerl.at|~ads.harvard.edu|~ads.instacart.com|~ads.jiosaavn.com|~ads.kaipoke.biz|~ads.kazakh-zerno.net|~ads.kifli.hu|~ads.knuspr.de|~ads.listonic.com|~ads.magalu.com|~ads.mercadolivre.com.br|~ads.mgid.com|~ads.microsoft.com|~ads.midwayusa.com|~ads.mobilebet.com|~ads.mojagazetka.com|~ads.msstate.edu|~ads.mst.dk|~ads.mt|~ads.nc|~ads.nipr.ac.jp|~ads.olx.pl|~ads.pinterest.com|~ads.red|~ads.rohlik.cz|~ads.route.cc|~ads.safi-gmbh.ch|~ads.scotiabank.com|~ads.selfip.com|~ads.shopee.cn|~ads.shopee.co.th|~ads.shopee.com.br|~ads.shopee.com.mx|~ads.shopee.com.my|~ads.shopee.kr|~ads.shopee.ph|~ads.shopee.pl|~ads.shopee.sg|~ads.shopee.tw|~ads.shopee.vn|~ads.smartnews.com|~ads.snapchat.com|~ads.socialtheater.com|~ads.spotify.com|~ads.studyplus.co.jp|~ads.taboola.com|~ads.tiktok.com|~ads.typepad.jp|~ads.us.tiktok.com|~ads.viksaffiliates.com|~ads.vk.com|~ads.watson.ch|~ads.x.com|~ads.yandex|~badassembly.com|~caravansforsale.co.uk|~fusac.fr|~memo2.nl|~reempresa.org|~satmetrix.com|~seriouswheels.com
 ://ads2.
 ://adserver1.
+://adsserver.
 ://adv.$domain=~adv.asahi.com|~adv.bet|~adv.blue|~adv.chunichi.co.jp|~adv.cincsys.com|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.design|~adv.digimatix.ru|~adv.ec|~adv.ee|~adv.gg|~adv.hokkaido-np.co.jp|~adv.kompas.id|~adv.lack-girl.com|~adv.mcr.club|~adv.mcu.edu.tw|~adv.michaelgat.com|~adv.msk.ru|~adv.neosystem.co.uk|~adv.peronihorowicz.com.br|~adv.rest|~adv.ru|~adv.tools|~adv.trinet.ru|~adv.ua|~adv.vg|~adv.yomiuri.co.jp|~advancedradiology.com|~advids.co|~farapp.com|~pracuj.pl|~r7.com|~typeform.com|~welaika.com
 ://adv.$domain=~adv.ru|~forex-tv-online.com
 ://affiliate.$third-party
@@ -17965,8 +17987,6 @@ kukuw.com###gg_rl
 kuman.com##.guide-download-footer-box
 kumi.cn##.ad64060Box
 kumi.cn##div[class^="adz"]
-kundeavisogtilbud.no##.page-promotion-item
-kundeavisogtilbud.no,offertevolantini.it##.corner-popup-container
 kurashiru.com###footer_app
 kurashiru.com##.AppLp-root
 kurashiru.com##.HeaderBanner
@@ -19999,7 +20019,6 @@ point.md#?#.bottom-bar > div:has(> a.bottombar-download)
 point.rakuten.co.jp###dl-content
 point.rakuten.co.jp##img[src^="/img/crossuse/footer-banner/"]
 pointcard.rakuten.co.jp###optionalAppDownload
-pokebattler.com##.container > div.row:has(> div[class^="col-"] > a[href^="https://play.google.com/store/apps/details?id=com.pokebattler.raidParty"])
 pokebattler.com##a[title="Pokebattler Raid Party App"]
 pokemongo-get.com###appreach-box
 pokemonhubs.com,free.com.tw,daybuy.tw##body .code-block
@@ -25127,6 +25146,7 @@ zzzyk.com###Tinfo
 ||88362zubo95838.com^
 ||88448.com/images/appkai980x100.gif
 ||8850.5clo0xmbf.com^
+||88545539.xyz^$document,popup
 ||8861198.com^
 ||8861202.com^
 ||8878tp.com^
@@ -25758,6 +25778,7 @@ zzzyk.com###Tinfo
 ||acdref117.cn^
 ||acdrewrf711.cn^
 ||acdwef114.cn^
+||ace-adserver.com^
 ||acedirect.net^$popup
 ||acemof.top^
 ||acertb.com^
@@ -28652,6 +28673,7 @@ zzzyk.com###Tinfo
 ||bigear.cn/cache/htmlcache/
 ||bignqzm.cn^
 ||bigrourg.net^
+||bigsquidrc.com/wp-content/themes/bsrc2/js/adzones.js
 ||bihaipack.com^
 ||bihunekus.com^
 ||biiepofl.xyz^
@@ -32538,6 +32560,7 @@ zzzyk.com###Tinfo
 ||ds3.biz^
 ||ds88pc0kw6cvc.cloudfront.net^
 ||dsa22.com^
+||dsad234.fun^
 ||dsadghrthysdfadwr3sdffsdaghedsa2gf.xyz^
 ||dsaewew21.fun^
 ||dsbjdeh.cn^
@@ -34687,6 +34710,7 @@ zzzyk.com###Tinfo
 ||geedoovu.net^
 ||geekbang.org/public/serving/
 ||geekpark.net/api/v1/ads
+||geewdashb3.fun^
 ||gegeyingshi.com/template/*/images/g_js/
 ||geicmu.xyz^
 ||geilicdn.com/img*_960_60.
@@ -35923,6 +35947,7 @@ zzzyk.com###Tinfo
 ||hentaifox.com/js/slider.js
 ||hentaigold.net^
 ||hentaihaven.xxx/wp-content/plugins/player-logic/player.php?$replace=/(let url = ')https:\/\/static\.ads-twitter\.com\/[\s\S]*?(';)/\$1\/\$2/
+||hentairider.com/banners/
 ||hentaivideos.net/imp/
 ||henwaresibylic.com^
 ||herdmenrations.com^
@@ -37915,6 +37940,7 @@ zzzyk.com###Tinfo
 ||jinhonghao.cn^
 ||jinhua.com.cn/ad_pic/
 ||jinman4.com/ad/
+||jinnanyq.com/js/zmjw.js
 ||jinripkk.com^
 ||jinti.com^*/aspx/*gg
 ||jintonghua.com^
@@ -39559,6 +39585,7 @@ zzzyk.com###Tinfo
 ||lizehuandian.top^
 ||lizijing12.top^
 ||ljarfvg.cn^
+||ljbrbz.xyz^
 ||ljdofz.xyz^
 ||ljhbhy.cn^
 ||ljnrjt.xyz^
@@ -40674,6 +40701,7 @@ zzzyk.com###Tinfo
 ||mkscy6.cn^
 ||ml314.com^
 ||mlatrmae.net^
+||mlcbgw.xyz^
 ||mldzwmt.xyz^
 ||mlegyu.xyz^
 ||mlhdvjv.xyz^
@@ -40958,6 +40986,7 @@ zzzyk.com###Tinfo
 ||mrtlisx.top^
 ||mrtnsvr.com^
 ||mrtxtrq.xyz^
+||mrutvncx.top^
 ||mryshl.com^
 ||mryzroahta.com^
 ||ms-ads-monitoring-events.presage.io
@@ -45755,6 +45784,7 @@ zzzyk.com###Tinfo
 ||service-stitcher*.clusters.pluto.tv/*/session.json$replace=/("(adBreaks)":\[)[\s\S]*?(\]\,"deltaFromClient")/\$1\$3/
 ||service.4gtv.tv/4gtv/Data/GetAD.ashx$replace=/((\{[\s\S]*?)"preroll":( )?\[)[\s\S]*\]/\$1]/,important,domain=4gtv.tv
 ||service.iwara.tv/*/*.php?zones=
+||service.iwara.tv/z/z.php
 ||servicer.mgid.com^$redirect=nooptext,third-party,important
 ||services.aomg5bzv7.com^
 ||services.brid.tv/player/build/brid.min.js$domain=android-x86.org|blitz.gg|ultrasurfing.com|boundingintocomics.com
@@ -49409,6 +49439,7 @@ zzzyk.com###Tinfo
 ||veaiyl.icu^
 ||vebv8me7q.com^
 ||vecggfp.icu^
+||vectips.com/wp-content/themes/vectips-theme/js/adzones.js
 ||vectorsfangs.com^
 ||veepteero.com^
 ||vegasreals.com^
