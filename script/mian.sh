@@ -3,14 +3,12 @@
 # 下载规则
 curl -o i-1.txt https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
 curl -o i-2.txt https://filters.adtidy.org/android/filters/224_optimized.txt
-curl -o i-3.txt https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjxlist.txt
-curl -o i-4.txt https://raw.githubusercontent.com/damengzhu/abpmerge/main/EasyListnoElementRules.txt
-curl -o i-5.txt https://filters.adtidy.org/android/filters/20_optimized.txt
-curl -o i-6.txt https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-curl -o i-7.txt https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/base/%E5%85%B6%E4%BB%96.prop
-curl -o i-8.txt https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/base/%E5%8F%8DAdblock.prop
-curl -o i-9.txt https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
-curl -o i-10.txt https://easylist-downloads.adblockplus.org/easylistchina.txt
+curl -o i-3.txt https://raw.githubusercontent.com/damengzhu/abpmerge/main/EasyListnoElementRules.txt
+curl -o i-4.txt https://filters.adtidy.org/android/filters/20_optimized.txt
+curl -o i-5.txt https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/base/%E5%85%B6%E4%BB%96.prop
+curl -o i-6.txt https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/base/%E5%8F%8DAdblock.prop
+curl -o i-7.txt https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
+curl -o i-8.txt https://easylist-downloads.adblockplus.org/easylistchina.txt
 
 # 合并规则并去除重复项
 cat i*.txt > i-mergd.txt
@@ -25,7 +23,7 @@ num=`cat i-tmp.txt | wc -l`
 # 添加标题和时间
 echo "[Adblock Plus 2.0]" >> i-tpdate.txt
 echo "! Title: ABP Merge Rules" >> i-tpdate.txt
-echo "! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，10007自用规则，EasyList no Element Rules，EasylistChina，EasylistLite，CJX'sAnnoyance，Adblock Warning Removal List" >> i-tpdate.txt
+echo "! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，10007自用规则，EasyList no Element Rules，EasylistChina，CJX'sAnnoyance" >> i-tpdate.txt
 echo "! Homepage: https://github.com/damengzhu/abpmerge" >> i-tpdate.txt
 echo "! Version: `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"`" >> i-tpdate.txt
 echo "! Total count: $num" >> i-tpdate.txt
