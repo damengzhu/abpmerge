@@ -6,4 +6,4 @@
 ## 规则链接： 
 [https://raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt](https://raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt) 
 ### 镜像： 
-[https://raw.gitmirror.com/damengzhu/abpmerge/main/abpmerge.txt](https://raw.gitmirror.com/damengzhu/abpmerge/main/abpmerge.txt)
+[https://slink.ltd/https://raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt](https://slink.ltd/https://raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt)
