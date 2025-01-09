@@ -2,8 +2,8 @@
 ! Title: ABP Merge Rules
 ! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，10007自用规则，EasyList no Element Rules，EasylistChina，CJX'sAnnoyance，Adblock Warning Removal List
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2025-01-09 19:21:08
-! Total count: 58416
+! Version: 2025-01-10 04:19:14
+! Total count: 58435
 ###ADbox
 ###ADtip
 ###Ad-Container
@@ -834,6 +834,8 @@
 ###top-gg-container
 ###top-linktext-ad
 ###top-scroll-sixgrid-ad
+###top-sixgrid-ad-1
+###top-sixgrid-ad-2
 ###topBanners
 ###topNavad
 ###top_ad
@@ -3906,6 +3908,7 @@
 ##div[id="showImages"][style="width: 100%; position: fixed; bottom: 0px; left: 0px; z-index: 2147483647; display: block;"]
 ##div[id="videoMask"]
 ##div[id] > div[style*='z-index: 2147483647; width: 100vw; background: url']
+##div[id][style] > span:not([class]):not([id]) > img[style^="width:100%;height:13"]
 ##div[id^="M"][id*="Composite"]
 ##div[id^="a-loading-"] > span
 ##div[id^="ad_thread"]
@@ -5033,6 +5036,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 .com:*/sc/*?n=$third-party
 .com:*/sc/*?x=$third-party
 .com:*/stats/*/*?*=*&host=$third-party
+.com:*/tjjs/?*=$third-party
 .com:*/vh1/$third-party
 .com:*/vh2/$third-party
 .com:*/vh3/$third-party
@@ -5043,6 +5047,8 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 .com:*/vj3/$third-party
 .com:*/vj4/$third-party
 .com:*/vj5/$third-party
+.com:*0*/wap_*_*_*$other,third-party
+.com:*0*/wap_*_*_*$~image,~stylesheet,third-party
 .com:10446/*/get*.html
 .com:12289/$script,third-party
 .com:18*/*.js?v=17$third-party
@@ -5353,6 +5359,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 .vip/html/zbxx.js
 .vip/js/ads/
 .vip/style/vue.js?v=
+.vip:*/ab/rtcv.js$~third-party
 .wap.x4399.com^
 .work/ads/
 .xin/blxn_*.js?
@@ -7128,6 +7135,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /js/utils51.js
 /js/utils78.js
 /js/wahha/*
+/js/wap2-jm-ms-ld.js?ver=
 /js/wap2-jm-ms.js?ver=$~third-party,script
 /js/wlfloat.js
 /js/xb.js$script,third-party
@@ -9479,6 +9487,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 ://*.*.*:*/vj*/$domain=omofun.buzz|omofun.link|omofun.live|omofun.top|omofuns.buzz|omofuns.link|omofuns.live|omofuns.top
 ://*.*.xyz/*/*-*-*-*/$third-party
 ://*.*.xyz:*/*/*-*-*-*/$third-party
+://*.*/*mk?ssid=$third-party
 ://*.*/js/js4.js?v=$~third-party
 ://*.*27txt.com/*/*.js$~third-party
 ://*.*27txt.com/xi.js$~third-party
@@ -9521,6 +9530,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 ://*btbtt.*/view/image/QT_
 ://*dianjiangxin.*/js/mc.js?
 ://*dilidili*.*/js/*.js?ver=
+://*dm*/js/*.js?ver=
 ://*dm*/static/js/toper.js$~third-party
 ://*ee-tv.*/js/footer.js
 ://*freeok.*/asdasdad.js$script
@@ -9917,6 +9927,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 @@/live/*.m3u8$xmlhttprequest,stealth=referrer,domain=flstv.online|itssportstime.info|gamehdlive.net|weakspell.to|weakspell.org|streamocean.online|gameshdlive.net|bestsolaris.com|itssportstime.info|weakspell.to
 @@/log/report/*$script,domain=bilibili.com
 @@/matomo.js$domain=github.com|trcet77.com
+@@/media/*$image,stealth=referrer,domain=bato.to
 @@/media/*/js/adblock_detector.js$domain=eska.pl|eskarock.pl|voxfm.pl|vibefm.pl|radiosupernova.pl
 @@/mobileads.$domain=naviking.localking.com.tw
 @@/mono.m3u8$stealth=referrer
@@ -14763,6 +14774,7 @@ bookrbx.com##a[href="/rmtj.html"]
 books.com.tw##.header_box_pop > [class^="flash_banner"]
 books.com.tw#%#//scriptlet('remove-class', 'with-app-banner', '.page-content.with-app-banner')
 books.rakuten.co.jp###contents > div > a[href="https://readee.rakuten.co.jp/aboutreadee"]
+books.yandex.ru##a[class*="PromoAppBanner"]
 books.yandex.ru##div[class^="ContentLeftColumn_appContainer"]
 books.yandex.ru##div[class^="YearResultBanner_container"]
 bookskeeper.ru,e-xecutive.ru##.warning
@@ -15897,6 +15909,7 @@ dlive.tv##.v-snack--bottom
 dlkoo.cc##ins[id^="tanxssp-outer-conmm_"]
 dlkoo.com##ins[id^="tanxssp-outer-conmm_"]
 dm010.com##a[href*=".apk"]
+dm4.cc##.adv
 dm5.com###youce
 dm5.com##.index-side-code
 dm5.com#$#body[style*="overflow"] { overflow: auto !important; }
@@ -16898,6 +16911,8 @@ fuyang.net###portal_block_502
 fuyang.net##.eis_fbox_260:nth-child(n+3)
 fuyang.net##.eis_fbox_980
 fuzhou.baixing.com#@#.ad-title
+fvvfu.com##.gotoTop
+fvvfu.com##div.createjs
 fwwang.cn###n_s_300250
 fwwang.cn###n_s_300250ad
 fwxgx.com###jPpo_sc
@@ -20213,6 +20228,7 @@ mirrormedia.mg##.story__ad
 mirrormedia.mg##div[class^="gpt-placeholder"]
 mirrormedia.mg##div[class^="related-article-list__AdvertisementWrapper"]
 mirtesen.ru#$#html { overflow: auto !important; }
+missav.com,missav123.com,missav789.com,missav888.com,myav.com,thisav.com##+js(nowoif)
 missav.com,missav888.com,missav123.com,missav789.com,thisav.com##.list-disc > li:has(> a[href^="https://bit.ly/"])
 missav.com,missav888.com,missav123.com,missav789.com,thisav.com##.text-nord14
 missav.com,missav888.com,missav123.com,missav789.com,thisav.com##.under_player
@@ -24935,6 +24951,7 @@ yydscomic.com##div[style^="width: 100%;background-color: black;color: white;padd
 yydstv.net##body > div[class][style]
 yydy.cc##a[onclick^="window"] > img[id][width="1"],a[style*="width:99%"][style*="z-index:100000"][style*="block"]
 yyets.click#?#.MuiBadge-root:-abp-has(>a[href*="/maomao.cloud/"])
+yyjnhg.com##.container.text-center
 yyrtv.com##.right-gg
 yyrtv.com##li[class*="baidu"]
 yz.m.sm.cn##[id^="dl-banner-"]
@@ -39359,6 +39376,7 @@ zzzyk.com###Tinfo
 ||eraptbiyoyj.com^
 ||eraudseen.xyz^
 ||ercnrxa.cn^
+||ercoils.com^
 ||erebor.douban.com^
 ||erfskhnpter.xyz^
 ||ergadx.com^
@@ -42183,7 +42201,7 @@ zzzyk.com###Tinfo
 ||hjbqnwb.com^
 ||hjdjfl.icu^
 ||hjfile.cn/analytics/site/TrackEvent.js
-||hjfile.cn/analytics/site/TrackEvent.js! Checksum: 4W7nR+utI3lWnS6fGoa2tg
+||hjfile.cn/analytics/site/TrackEvent.js! Checksum: DjRQjyZPbyK/+KjUrH0YOA
 ||hjfile.cn/lib/hui/footer/0.1.0/footer.js
 ||hjfile.cn/lib/uzhi/uzt.
 ||hjfile.cn/site/hj-lzs/
@@ -51264,6 +51282,7 @@ zzzyk.com###Tinfo
 ||saltsleaseholder.com^
 ||sam*.baby-kingdom.com^
 ||samba.notifysrv.com^
+||samba.org/banners/$image
 ||same*.stockstar.com^
 ||same.chinadaily.com.cn^
 ||same.eastmoney.com^
