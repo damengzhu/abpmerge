@@ -2,8 +2,8 @@
 ! Title: ABP Merge Rules
 ! Description: 该规则合并自jiekouAD，AdGuard中文语言规则，AdGuard移动横幅广告过滤器，10007自用规则，EasyList no Element Rules，EasylistChina，CJX'sAnnoyance，Adblock Warning Removal List
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2025-01-27 04:17:25
-! Total count: 58833
+! Version: 2025-01-27 16:23:31
+! Total count: 58849
 ###ADbox
 ###ADtip
 ###Ad-Container
@@ -5857,6 +5857,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 /ad-provider.
 /ad-scroll.js$script
 /ad-server.$~script
+/ad-shield/e/*$script,third-party
 /ad-styles.
 /ad-tag-
 /ad-tag2.
@@ -9692,6 +9693,7 @@ $xmlhttprequest,third-party,redirect-rule=noopjs,domain=bizjournals.com
 ://vlets.*.xyz$third-party
 ://widgets.spklw.com/v1/data/?*&widget-id=$replace=/(?<=\[)(\{"image":\{"url":"[\s\S]*?"type":"ad"[\s\S]*?\,"service_version":"[\s\S]*?"\}(\,)?)+|(\,)?\{"image":\{"url":"[\s\S]*?"type":"ad"[\s\S]*?\,"service_version":"[\s\S]*?"\}//
 ://www.*.js|$script,third-party,domain=159i.com|r3sub.com|thisav.com
+://www.*.xyz/script/$script,third-party,domain=jmty.jp|dolldivine.com
 ://www3.doubleclick.net^|$xmlhttprequest,redirect=noopjson
 ://xingkong6688s.oss-
 ://xxsmad*.com
@@ -14317,6 +14319,7 @@ baike.so.com##section#business-flow.business-flow
 baikequ.com,lkyw.net###bottommob
 baiten.cn##.JS_advertisement
 baiten.cn##.news2ad
+baito.mynavi.jp##.wrapMynavibaitoApplication div.panel_area
 baitoru.com##.common-cutSpace > div[style="padding: 40px 10px 0px;"]
 baitoru.com,hokuohkurashi.com,weather.yahoo.co.jp##a[href^="https://app.adjust.com/"]
 baitorupro.com,mini.*##.js-smartbanner
@@ -14607,6 +14610,8 @@ bing.com##a.sb_meta[href^="http://advertise.bingads.microsoft.com"]
 bing.com##a[h$=",Ads"]
 bing.com##a[href*="/aclick?ld="]
 bing.com##div[aria-label$="ProductAds"]
+bing.com##div[data-ans*="BrandZoneAds"]
+bing.com##li:has([data-ans*="BrandZoneAds"])
 bing.com##li[class="b_algo"]:has(.b_attribution[data-partnertag]+p[class])
 bing.com##li[class="sa_hd"][role="option"]
 bing.com##li[class^="sa_sg"][stype="PN"]
@@ -14623,6 +14628,7 @@ bing.com,cn.bing.net##.b_algo:has(.rms_img[src*="/th?id=OADD2."][src$="21.2"])
 bing.com,cn.bing.net##.b_algo:has(.rms_img[src*="=AdsPlus"])
 bing.com,cn.bing.net##.pa_sb
 bing.com,cn.bing.net##DIV#bnp_container
+bing.com,cn.bing.net##LI.b_ans
 bing.com,cn.bing.net##a[h$=",Ads"]
 bing.com,cn.bing.net##a[href*="/aclick?ld="]
 bing.com,cn.bing.net##li.b_ad
@@ -14636,8 +14642,8 @@ bingfeng.tw#%#//scriptlet('abort-current-inline-script', 'setTimeout', 'COOKIE_N
 bioon.com###ad_tb
 bioon.com##.grid_6
 biquge001.com###content > a
-biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cqshuda.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,douluo.cc,fofoyy.com,hantv8.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,yhdm9.cc##^script:has-text(new Function)
-biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cqshuda.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,douluo.cc,fofoyy.com,hantv8.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,yhdm9.cc##script:has-text(new Function)
+biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,cqshuda.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,douluo.cc,fcmv.cc,fofoyy.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,mjtt1.cc,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,xcmv.cc,yhdm9.cc,zhenbuka.cc##^script:has-text(new Function)
+biquge365.net,cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,cqshuda.com,dldl1.cc,dldl2.cc,dldl3.cc,dldl4.cc,dldl5.cc,douluo.cc,fcmv.cc,fofoyy.com,hantv8.com,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,mjtt1.cc,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,xcmv.cc,yhdm9.cc,zhenbuka.cc##script:has-text(new Function)
 biquge365.net,dandanzan.club,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,yhdm9.cc##^script:has-text(navigator.platform)
 biquge365.net,dandanzan.club,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,txtduo.org,yhdm9.cc##script:has-text(navigator.platform)
 biquge365.net,fofoyy.com,omofun.buzz,omofun.link,omofun.live,omofun.top,omofuns.buzz,omofuns.link,omofuns.live,omofuns.top,yhdm9.cc,txtduo.org##^script:has-text(.substr\(10\))
@@ -15018,8 +15024,8 @@ cbber.com##div[style$=":0px;top:200px;z-index:9999;"]
 cbber.com,xiaot.com###diy_chart
 cbber.com,you85.net###diy2
 cbg.cn##div[class^="erweima"]
-cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc##^script:has-text(new Date)
-cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc##script:has-text(new Date)
+cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,fcmv.cc,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,mjtt1.cc,xcmv.cc,zhenbuka.cc##^script:has-text(new Date)
+cbh1.cc,cbh2.cc,cbh3.cc,cbh5.cc,cdm7.cc,fcmv.cc,hjtv.cc,hjtv2.cc,hjw1.cc,hjw2.cc,mjtt1.cc,xcmv.cc,zhenbuka.cc##script:has-text(new Date)
 cbmay.com##.widget
 cbmland.com##div[id^="ads_"]
 cbndata.com##.Toastify
@@ -15090,7 +15096,6 @@ che168.com##.talkprice.liaoliao.float-zixun
 che168.com#@#[data-adid]
 cheaa.com###AD002
 cheaa.com###ADText
-check24.de##.bottomSmartAppBanner
 check24.de#$##splashScreenContainer { display: none !important; }
 check24.de#$#.c24m-asb { display: none !important; }
 check24.de#$#.c24m-asb-visible { position: absolute !important; }
@@ -15994,6 +15999,7 @@ doii.cc##.w-\[200px\].fixed
 doktortakvimi.com,doctoralia.es,miodottore.it,znamylekar.cz,doctoralia.com.pt,doctoralia.com.mx,doctoralia.cl,doctoralia.com.br,doctoraliar.com,doctoralia.pe,doctoralia.co,znanylekarz.pl##.patient-app-banner-index
 dolap.com#$#.fancybox-lock { overflow: auto !important }
 dolap.com#?#.fancybox-overlay > .fancybox-wrap:has(div.fancybox-inner > div.redirectToDownloadApp)
+dolldivine.com$$script[tag-content="adrecover.com"]
 domainanalysis.io##.app-banner
 dominus.kiev.ua##body > #myModal
 donanimhaber.com##span[class^="open-with-app-"]
@@ -18583,6 +18589,7 @@ iqiyi.com#%#//scriptlet('json-prune', 'data.template.tabs.*.blocks.*.data.data.v
 iqiyi.com,~mall.iqiyi.com,~so.iqiyi.com##a[href*="http://mall.iqiyi.com/item/"]
 iqshv.com#?#.post-list-item:-abp-has(.thumb-link[href^="http"]:not([href*=".iqshv."]))
 iqshw.com##.iqshwad-comm
+iraw.rcc.jp###app-btn
 irishradiolive.com,myonlineradio.at,myonlineradio.de,myonlineradio.hu,myonlineradio.nl,myonlineradio.sk,myradioendirect.fr,myradioenvivo.ar,myradioenvivo.mx,myradioonline.cl,myradioonline.es,myradioonline.it,myradioonline.pl,myradioonline.ro,ukradiolive.com#$#.cover-slider-cont { display: block !important; }
 irishradiolive.com,myonlineradio.at,myonlineradio.de,myonlineradio.hu,myonlineradio.nl,myonlineradio.sk,myradioendirect.fr,myradioenvivo.ar,myradioenvivo.mx,myradioonline.cl,myradioonline.es,myradioonline.it,myradioonline.pl,myradioonline.ro,ukradiolive.com#$#.mobileAffiliateAdblock { display: none !important; }
 irishradiolive.com,myonlineradio.at,myonlineradio.de,myonlineradio.hu,myonlineradio.nl,myonlineradio.sk,myradioendirect.fr,myradioenvivo.ar,myradioenvivo.mx,myradioonline.cl,myradioonline.es,myradioonline.it,myradioonline.pl,myradioonline.ro,ukradiolive.com#%#//scriptlet('trusted-click-element', '.js-closeAppBnr')
@@ -19276,7 +19283,6 @@ kurashiru.com###footer_app
 kurashiru.com##.AppLp-root
 kurashiru.com##.HeaderBanner
 kurashiru.com##.HeroVideoPc
-kurashiru.com##.PcToAppBanner
 kurashiru.com##.footer-image-wrapper
 kurashiru.com##.header-app-banner
 kurashiru.com##div[class="SpApp"][id="footer_app"]
@@ -19518,7 +19524,6 @@ linuxde.net##.ad360x500
 linuxidc.com##.linux801
 lipscosme.com###footer-app-banner
 lipscosme.com##.open-app-banner
-lipscosme.com##.welcome-index__hero
 liquipedia.net###networknotice-71
 liquipedia.net##.app-popup
 list.jd.com##.jdm-tbar-tab-qrcode
@@ -20165,7 +20170,6 @@ meijumi.net##.couplet_app
 meijumi.net##.widget_metaslider_widget
 meijuniao.com###widget-weixin
 meijuniao.com##.player-ad1
-meijutt.net##.widget-weixin
 meijutt.net#%#//scriptlet('trusted-set-cookie-reload', 'meijutt2024', 'meijutt2025')
 meijutt.tv##.a960_index
 meijuxingqiu.com##.fixed-bottom-bar
@@ -23010,6 +23014,7 @@ suopao.org##.tr3.t_one[onmouseout]
 super.cz$$script[tag-content=" if (adbCookie == "]
 super.cz$$script[tag-content="adCommercialBackground"]
 supercloudsms.com##a[style="display: block;"]
+superfb.com##a[href="http://www.superfb.com/mobil"]
 superlife.ca##.sidebar-ad-zone
 supertaste.tvbs.com.tw###ad_m_bottom
 supertaste.tvbs.com.tw###lightbox--ad
@@ -24509,7 +24514,6 @@ xiakexsw.com##a[href^="/"][rel="nofollow"]
 xiakexsw.com##script + div[style]
 xianzhenyuan.cn##.sd_ad:not(#xztba)
 xianzhenyuan.cn##a[href*=".tmall.com"]:not(#xztba)
-xiaohongshu.com##.button-bottom-bar
 xiaohongshu.com#?#.note-view-container > div.nav-bar-box:has(> div.reds-box div.reds-text:contains(小红书App))
 xiaohutuwb.com##.ceo_ads
 xiaolz.cn###masonry2
@@ -29314,6 +29318,7 @@ zzzyk.com###Tinfo
 ||4wnet.com^
 ||4wnetwork.com^
 ||4wu3gf.cn^
+||4zn.fun^
 ||5.61.55.143^
 ||5.ccutu.com^
 ||5.gzfenda.com^
@@ -30076,6 +30081,7 @@ zzzyk.com###Tinfo
 ||6368.luronews.com^
 ||637o.top^
 ||6380.lootynews.com^
+||63801782.xyz^
 ||6383.luronews.com^
 ||6384.jemonews.com^
 ||6385.lootynews.com^
@@ -30376,6 +30382,7 @@ zzzyk.com###Tinfo
 ||7053.reminews.com^
 ||7056.lookinews.com^
 ||7056.reminews.com^
+||705dm.com/color.js
 ||7060.lookinews.com^
 ||7061.reminews.com^
 ||7067.jemonews.com^
@@ -35001,6 +35008,7 @@ zzzyk.com###Tinfo
 ||bftqdd.xyz^
 ||bfugui.com^
 ||bfxytxdpnk.com^
+||bg-mania.jp/assets/js/anymanagerrecover.js
 ||bg04y.xyz^
 ||bg4nxu2u5t.com^
 ||bgbg00.fun^
@@ -36937,6 +36945,7 @@ zzzyk.com###Tinfo
 ||cn.bidushe.com^
 ||cn.ntdtv.com/assets/themes/ntd/js/article_ads.js
 ||cn4.animehdl.net^
+||cn46.com/color.js
 ||cn6x.com^
 ||cn846.com^
 ||cna5.cc/skins/js/
@@ -39810,6 +39819,7 @@ zzzyk.com###Tinfo
 ||epektpbbzkbig.com^
 ||epersaonwhois.com^
 ||eph-adsjutarnji.cdn.sysbee.net^
+||epicgfs.com/pocoloco_epic.js
 ||epicoldschool.com^$third-party
 ||epilinserts.com^
 ||epizzoacoses.com^
@@ -40635,6 +40645,7 @@ zzzyk.com###Tinfo
 ||fonsaigotoaftuy.net^
 ||fontke.com/custom/
 ||fontsquirrel.com/ajaxactions/get_ads^
+||fontsquirrel.com^*/advertisements/
 ||foodfunfestivals.com^$third-party
 ||foodieblogroll.com^
 ||foodmate.net/file/script/A
@@ -42659,7 +42670,7 @@ zzzyk.com###Tinfo
 ||hjbqnwb.com^
 ||hjdjfl.icu^
 ||hjfile.cn/analytics/site/TrackEvent.js
-||hjfile.cn/analytics/site/TrackEvent.js! Checksum: yHl1gMBWd+03LCBV/7DCzQ
+||hjfile.cn/analytics/site/TrackEvent.js! Checksum: VRMcnHQlrxDQmFUyIOCnzA
 ||hjfile.cn/lib/hui/footer/0.1.0/footer.js
 ||hjfile.cn/lib/uzhi/uzt.
 ||hjfile.cn/site/hj-lzs/
@@ -42827,6 +42838,7 @@ zzzyk.com###Tinfo
 ||hostkarma.notifysrv.com^
 ||hostmaster.brandnewapp.pro^
 ||hostmaster.rtnews.pro^
+||hostolhg.com^
 ||hot-mob.com^$third-party
 ||hotadultcontent.com^
 ||hotadultvids.com^
@@ -42981,6 +42993,7 @@ zzzyk.com###Tinfo
 ||huaban.com^*/ads
 ||huaerdadi.com^$third-party
 ||huaiduoduo.info/Runtime/js/
+||huakai2025.com/color.js
 ||huancaicp.com/?pid=$popup
 ||huanjugu.com/dm
 ||huanqiu.com/resource/js/base
@@ -47214,6 +47227,7 @@ zzzyk.com###Tinfo
 ||molimao.top/imp/upload/vod/*.gif
 ||molpmh.xyz^
 ||molpmh.xyz|
+||momentdd.com/color.js
 ||momijoy.ru^
 ||momoguoji.xyz^
 ||momoshop.com.tw/goods/GoodsDetail.jsp?$subdocument
@@ -50050,6 +50064,7 @@ zzzyk.com###Tinfo
 ||pubads.g.doubleclick.net/ondemand/hls/*.m3u8$hls=/redirector\.googlevideo\.com\/videoplayback[\s\S]*?dclk_video_ads/,domain=10play.com.au
 ||pubadx.one^
 ||pubaka5.com^
+||pubcircle.ai^$third-party
 ||pubfeed.linkby.com^
 ||pubfuture-ad.com^
 ||pubfuture.com^$third-party
@@ -53399,6 +53414,7 @@ zzzyk.com###Tinfo
 ||superchat.live^
 ||superfastcdn.com^
 ||superfasti.co^
+||superfb.com/_img/banner/sfb*.png
 ||superfb.com/_img/mobil_imaj.png
 ||superficialeyes.com^$third-party
 ||superficialspring.com^$third-party
