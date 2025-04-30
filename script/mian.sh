@@ -2,7 +2,7 @@
 
 # 下载规则
 curl -o i-1.txt https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
-curl -o i-2.txt https://filters.adtidy.org/android/filters/224_optimized.txt
+curl -o i-2.txt https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
 curl -o i-3.txt https://raw.githubusercontent.com/damengzhu/abpmerge/main/EasyListnoElementRules.txt
 curl -o i-4.txt https://filters.adtidy.org/android/filters/20_optimized.txt
 curl -o i-5.txt https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/base/%E5%85%B6%E4%BB%96.prop
