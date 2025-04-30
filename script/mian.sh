@@ -36,11 +36,9 @@ cat "abpmerge.txt" | grep \
 -e "\(^\|\w\)#@\?\$?#" \
 > "CSSRule.txt"
 
-# 从 https://filters.adtidy.org/android/filters/2_optimized.txt 下载规则文件
-# 移除包含 # 或 generichide 的行，然后生成 easylistnocssrule.txt 的修改版本到当前工作目录。
 
 # 获取规则文件并将其存储在内存中
-EASYLIST=$(wget -q -O - https://filters.adtidy.org/android/filters/2_optimized.txt)
+EASYLIST=$(wget -q -O - https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt)
 
 # 移除包含 # 或 generichide 的行
 echo "$EASYLIST" | grep -v "#" | grep -v "generichide" > EasyListnoElementRules.txt
