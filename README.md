@@ -6,4 +6,4 @@
 ## 规则链接： 
 [https://raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt](https://raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt) 
 ### 镜像： 
-[https://ghproxy.1888866.xyz/raw.githubusercontent.com/damengzhu/abpmerge/main/CSSRule.txt](https://ghproxy.1888866.xyz/raw.githubusercontent.com/damengzhu/abpmerge/main/CSSRule.txt)
+[https://ghproxy.1888866.xyz/raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt](https://ghproxy.1888866.xyz/raw.githubusercontent.com/damengzhu/abpmerge/main/abpmerge.txt)
