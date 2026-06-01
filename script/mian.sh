@@ -50,7 +50,7 @@ chn_num=`cat chn-tmp.txt | wc -l`
 # 添加标题头
 echo "[Adblock Plus 2.0]" > chn-tpdate.txt
 echo "! Title: Chinese ABP Merge Rules" >> chn-tpdate.txt
-echo "! Description: 该规则合并自AdGuard中文语言规则、lingeringsound其他规则、jiekouAD规则" >> chn-tpdate.txt
+echo "! Description: 该规则合并自AdGuard中文语言规则、10007自用规则、jiekouAD规则" >> chn-tpdate.txt
 echo "! Homepage: https://github.com/damengzhu/abpmerge" >> chn-tpdate.txt
 echo "! Version: `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"`" >> chn-tpdate.txt
 echo "! Total count: $chn_num" >> chn-tpdate.txt
