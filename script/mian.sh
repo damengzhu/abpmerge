@@ -12,7 +12,7 @@ curl -o i-8.txt https://easylist-downloads.adblockplus.org/antiadblockfilters.tx
 
 # 合并规则并去除重复项
 cat i*.txt > i-mergd.txt
-cat i-mergd.txt | grep -v '^!' | grep -v '^！' | grep -v '^# ' | grep -v '^# ' | grep -v '^\[' | grep -v '^\【' > i-tmpp.txt
+cat i-mergd.txt | grep -v '^!' | grep -v '^！' | grep -v '^# ' | grep -v '^\[' | grep -v '^\【' > i-tmpp.txt
 sort -n i-tmpp.txt | uniq > i-tmp.txt
 
 python rule.py i-tmp.txt
@@ -74,23 +74,5 @@ cp EasyListnoElementRules.txt /path/to/repository/
 # 删除缓存
 rm i-*.txt
 
-#退出程序
-exit> "CSSRule.txt"
-
-
-# 获取规则文件并将其存储在内存中
-EASYLIST=$(wget -q -O - https://easylist-downloads.adblockplus.org/easylist.txt)
-
-# 移除包含 # 或 generichide 的行
-echo "$EASYLIST" | grep -v "#" | grep -v "generichide" > EasyListnoElementRules.txt
-
-# 将 EasyListnoElementRules.txt 复制到存储库中
-cp EasyListnoElementRules.txt /path/to/repository/
-
-
-# 删除缓存
-rm i-*.txt
-
-#退出程序
+# 退出程序
 exit
-
