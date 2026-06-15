@@ -2,8 +2,8 @@
 ! Title: Chinese ABP Merge Rules
 ! Description: 该规则合并自AdGuard中文语言规则、10007自用规则、jiekouAD规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2026-06-15 05:13:43
-! Total count: 38472
+! Version: 2026-06-15 21:55:52
+! Total count: 38484
 -1367066484.cos.
 -1325890192.cos.
 -1325890192.cos.
@@ -8661,7 +8661,7 @@ $websocket,domain=wap.yushuwu.cloud
 ://vlets.*.cyou$third-party
 ://vlets.*.shop$third-party
 ://vlets.*.xyz$third-party
-://www.*.js|$script,third-party,domain=159i.com|r3sub.com|thisav.com
+://www.*.js|$script,third-party,domain=159i.com|thisav.com
 ://www.nunuyy*/xx/*.js
 ://xchina*/plugins/jquery.modal/
 ://xchina*/plugins/sweetAlert
@@ -9864,7 +9864,6 @@ $websocket,domain=wap.yushuwu.cloud
 @@||quanzhi.cn/v3/images/index_ad/
 @@||quge5.com/88/tag.min.js$domain=wxredian.com
 @@||r.bat.bing.com/?ld=test$domain=mcappx.com
-@@||r3sub.com^$generichide
 @@||raenonx.cc^$generichide
 @@||readmoo.com/images/social/
 @@||realsrv.com/video-outstream.js$domain=chutlunds.com
@@ -10787,7 +10786,6 @@ baidu.com##.tb-threadlist__item.tb-banner
 baidu.com##.tc-card[tpl="fc_before_fixads"]
 baidu.com##.text-advertise
 baidu.com##.text-link-ads
-baidu.com##.tieba-pause-ad-container
 baidu.com##.top-ad-cont
 baidu.com##.top-banner-ad-wrap
 baidu.com##.under-tips
@@ -10835,6 +10833,7 @@ baidu.com##div.result-molecule > div[class^="index_ai-banner"]
 baidu.com##div[class$="-ecom-ads"]
 baidu.com##div[class$="-ecom-ads"]
 baidu.com##div[class*="fc-"][tplid]
+baidu.com##div[class*="tieba-pause-ad-container"]
 baidu.com##div[class^="sfc-video-page-list"]
 baidu.com##div[data-ad]
 baidu.com##div[data-key^="ad__"]
@@ -13483,6 +13482,11 @@ hao123.sh##.box-banner
 hao4k.cn##.lineC_right
 haoduoyun.cc#?#.ebookRight > div.tb_cell.mb10:has(> div.listcell > div.lc_head >h2:contains(课本赞助商))
 haojiyou.la##.iqshwad-div
+haokan.baidu.com###art-player-wrapper > div[class^="ArtVideo_"][class*="-pause-ad"]
+haokan.baidu.com##div[class^="guessLike_guess-like-index__"] ul[class^="guessLike_guess-list__"] > li[class^="guessLike_guess-item__"]:not([vid]):has(> div[class^="guessLike_guess-item-link__q"]:only-child)
+haokan.baidu.com##div[class^="videoList_videolist__"] > div[class^="videoList_videolist-item__"]:has(> div[class^="videoList_videolist-aditem__"])
+haokan.baidu.com##div[class^="video_land_pageBottomGuesslike__"] ul[class^="GuessLike_guess-list__"] > li[class^="GuessLike_guess-item__"]:not([vid]):empty
+haokan.baidu.com##div[class^="video_land_pageBottomGuesslike__"] ul[class^="GuessLike_guess-list__"] > li[class^="GuessLike_guess-item__"]:not([vid]):has(> div[class^="adItem_"])
 haorooms.com##.right_guanggao
 haote.com###playBox
 haote.com##.bigmainIn
@@ -13780,7 +13784,6 @@ huanqiu.com#%#//scriptlet('set-constant', 'AD_SURVEY_Add_AdPos', 'noopFunc')
 huanqiu.com#%#//scriptlet('set-constant', 'AD_SURVEY_Add_AdPos_Simple', 'noopFunc')
 huaren.live##.action-ad
 huaren.live##.pause-love
-huaren.live,huavod.com#%#//scriptlet('prevent-setTimeout', 'bait.offsetHeight===0')
 huaren.live,huavod.com#@#.ad_unit
 huaren.live,umbooks.com#%#//scriptlet('prevent-window-open')
 huaren.tv##.live-client_left
@@ -13797,7 +13800,10 @@ huavod.cc#%#(()=>{if(!location.href.includes("://huavod.cc/player/index.php"))re
 huavod.cc#%#//scriptlet('trusted-create-element', 'head', 'script', '', '(()=>{if(!location.href.includes("://huavod.cc/player/index.php"))return;const e=()=>{const e=document.querySelector("body > center > h1");e?.textContent?.includes("404 Not Found")&&(()=>{const e=top.document.querySelector(\'#playleft > iframe[src^="https://newplayer.huaren.live/player/index.php"]\');e&&(e.src=e.src.replace("huaren.live","huavod.top"))})()};"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()})();')
 huavod.cc,huavod.top,huaren.live,huavod.com,huavod.net##a[href^="/go/baba/"]
 huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com##div[id^="anti-adblock-"]
+huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('abort-current-inline-script', 'MutationObserver', 'isAdblocked')
+huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('abort-on-stack-trace', 'document.querySelector', 'isAdblocked')
 huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'showModal')
+huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('prevent-setTimeout', '/bait\.offsetHeight===0|isAdblocked|requestAnimationFrame\(/')
 huavod.cc,huavod.top,huavod.net,huavod.com,huaren.live#%#//scriptlet('set-constant', 'ConFig.ad_duration_ms', '0')
 huavod.cc,huavod.top,huavod.net,huavod.com,huaren.live#%#//scriptlet('trusted-replace-node-text', 'script', 'ConFig', 'let ConFig', 'var ConFig')
 huavod.cc,huavod.top,huavod.net,huavod.com,huaren.live#%#//scriptlet('trusted-set-constant', 'ConFig.config.ads', '{"pause":{"state":{}}}')
@@ -16328,7 +16334,7 @@ pan.baidu.com##.wp-side-options
 pan.baidu.com##A.active-msg
 pan.baidu.com##div.content DIV.photo-banner
 pan666.cn##.footer > .containerNarrow
-panda985.com,qqdsw8.cn,knews.com.tw,shiyrj.top,yalishi.com,guozaoke.com,100ec.cn,159i.com,1905.com,22vd.com,2345.cn,234fang.com,3gsc.com.cn,52youpiao.com,72g.com,8se.me,acg.bz,acg13.cn,acgbenzi.com,baiduyunpan.net,baike.com,bbs-mychat.com,cdyee.com,ce.cn,chinaqking.com,chinatimes.com,chinatruck.org,chinaz.com,cnforex.com,cnsoftnews.com,codepub.com,cq.xinhuanet.com,cxryun.cn,dav01.com,discuss.com.hk,djwma.com,dmzj.com,dmzj1.com,dngz.net,douban.com,dzwww.com,eastday.com,fengniao.com,focus.cn,fx112.com,gongkong.com,henan100.com,honglingjin.co.uk,house.jschina.com.cn,iciba.com,ifeng.com,ipeen.com.tw,isharebest.com,itavcn.com,jojf.cn,jrj.com.cn,kumi.cn,landiannews.com,lawtv.com.cn,lieyunwang.com,lncn.org,loveshang.com,ltn.com.tw,luo8.com,maxpda.com,mm111.net,moxing.net,mvcat.com,ncdiy.com,neotv.com.cn,newsmth.net,njdaily.cn,pc0359.cn,people.com.cn,pharmnet.com.cn,pixnet.net,pptv.com,ptbus.com,qncye.com,r3sub.com,sogou.com,sozi.cn,toolfk.com,tv.sohu.com,u-car.com.tw,weather.com.cn,xianbao.fun,yawin.cn,yb983.com,ydss.cn,yesky.com,yiche.com,yqxxs.com,zhihu.com,ziyuanyo.com##.ad
+panda985.com,qqdsw8.cn,knews.com.tw,shiyrj.top,yalishi.com,guozaoke.com,100ec.cn,159i.com,1905.com,22vd.com,2345.cn,234fang.com,3gsc.com.cn,52youpiao.com,72g.com,8se.me,acg.bz,acg13.cn,acgbenzi.com,baiduyunpan.net,baike.com,bbs-mychat.com,cdyee.com,ce.cn,chinaqking.com,chinatimes.com,chinatruck.org,chinaz.com,cnforex.com,cnsoftnews.com,codepub.com,cq.xinhuanet.com,cxryun.cn,dav01.com,discuss.com.hk,djwma.com,dmzj.com,dmzj1.com,dngz.net,douban.com,dzwww.com,eastday.com,fengniao.com,focus.cn,fx112.com,gongkong.com,henan100.com,honglingjin.co.uk,house.jschina.com.cn,iciba.com,ifeng.com,ipeen.com.tw,isharebest.com,itavcn.com,jojf.cn,jrj.com.cn,kumi.cn,landiannews.com,lawtv.com.cn,lieyunwang.com,lncn.org,loveshang.com,ltn.com.tw,luo8.com,maxpda.com,mm111.net,moxing.net,mvcat.com,ncdiy.com,neotv.com.cn,newsmth.net,njdaily.cn,pc0359.cn,people.com.cn,pharmnet.com.cn,pixnet.net,pptv.com,ptbus.com,qncye.com,sogou.com,sozi.cn,toolfk.com,tv.sohu.com,u-car.com.tw,weather.com.cn,xianbao.fun,yawin.cn,yb983.com,ydss.cn,yesky.com,yiche.com,yqxxs.com,zhihu.com,ziyuanyo.com##.ad
 pansci.asia##body > section.hide-on-print.mt-5
 pansci.asia##div[class^="pansc-"]
 pansci.asia#$##firstSingle { padding: 0 !important; }
@@ -16954,9 +16960,7 @@ qzone.qq.com##.topic_item[data-url*=".gdt.qq.com/"]
 qzwb.com###Javascript\.RightDiv
 qzwb.com##.qzw_live_img
 qzwb.com##body > .area[style^="height:60px;"]
-r3sub.com##div[class] > a[href^="show.php?id="]
 r3sub.com##div[class] > a[href^="show.php?id="][target="_blank"] > img
-r3sub.com##source + img
 raenonx.cc##.main_ads-content + div
 raenonx.cc##div[style="display: flex; justify-content: center; align-items: center; position: relative;"] > iframe
 rapidtai.com,taiav.com,taimadou.com,taisinba.com##.movie-card:has(img[alt*="廣告"])
@@ -20069,6 +20073,7 @@ zzzyk.com###Tinfo
 ||1jc5t.xyz^
 ||1jlp1qbgu.com^
 ||1jzocofm4.com^
+||1k2uh20wr.com^
 ||1k8j786ks5.com^
 ||1kanz.cn^
 ||1kb4atu6x.com^
@@ -21098,6 +21103,7 @@ zzzyk.com###Tinfo
 ||7u7jwonbf.com^
 ||7ue931y0gn.com^
 ||7usgqu07mk.com^
+||7w7kditsz.com^
 ||7wzx9.com/tbad.
 ||7x7n.com/static/image/888.jpg
 ||7x7n.com/static/pic/*.jpg
@@ -21397,6 +21403,7 @@ zzzyk.com###Tinfo
 ||9mdg9cu59.com^
 ||9miwo.com^
 ||9o29nhxgp.com^
+||9obmf866d.com^
 ||9odes.ltd^
 ||9oru1vh0w.com^
 ||9oxhstb2m2.com^
@@ -22659,6 +22666,7 @@ zzzyk.com###Tinfo
 ||baggvon.icu^
 ||baglezymoses.com^$third-party
 ||bahamut.com.tw/js/ad.js
+||bahpqcq.com^
 ||bai.luyouwang.com^
 ||bai128.xyz^
 ||baidu-jxf.co^$popup
@@ -23260,6 +23268,7 @@ zzzyk.com###Tinfo
 ||botcm.com/zhanqun/
 ||botnrr.xyz^
 ||botonmetaverse.com^
+||bowo666.com^
 ||boxmp4.com/js/foot.js
 ||boxwcr.icu^
 ||boyidianqi.com.cn^
@@ -24746,6 +24755,7 @@ zzzyk.com###Tinfo
 ||divcss5.com*/ibeifeng/
 ||divcss5.com*/liping/
 ||divergentld.com^
+||division43.top^
 ||diyibanzhu*.com/js/cdn.
 ||diyibanzhu*.com/js/html
 ||diyibanzhu*/js/cdn.js$~third-party
@@ -31334,6 +31344,7 @@ zzzyk.com###Tinfo
 ||pkvs.com/public/300/
 ||pkvs.com/public/as.js
 ||pkwnpgsex.com^
+||pkytxfiin.com^
 ||pl520.com^$third-party
 ||pl53l7tyw.com^
 ||pl7ncaj0b.com^
@@ -31801,6 +31812,7 @@ zzzyk.com###Tinfo
 ||qlkysc.icu^
 ||qlogo.cn^$domain=chichiav1.xyz
 ||qlogo1.store.qq.com^
+||qls7v6jd3.com^
 ||qlspx.com:$third-party
 ||qmarcani.com^
 ||qmav.cn^
@@ -32000,10 +32012,8 @@ zzzyk.com###Tinfo
 ||r36ku.site^
 ||r3nvrr4uzh.com^
 ||r3sub.com/images/aaa^
-||r3sub.com/images/ccc/
-||r3sub.com/posters/0069810.jpg
+||r3sub.com/nb/
 ||r3sub.com/posters/00698128.jpg
-||r3sub.com^*0.gif
 ||r40h9qvpq.com^
 ||r40xff8q48.com^
 ||r4uj20yt2u.com^
@@ -32104,6 +32114,7 @@ zzzyk.com###Tinfo
 ||redmx.cn^$third-party
 ||redshu.com/js/pcAdv.js
 ||redshu.com/js/www/jquerygg.js
+||redtvxjmgjbtlw.com^
 ||reflection67.top^
 ||register04.top^
 ||registration09.top^
@@ -33225,6 +33236,7 @@ zzzyk.com###Tinfo
 ||sxeimg.com/u/20191108/13082210.gif
 ||sxguowei.com^
 ||sxk9m8x.cn^
+||sxq9xn7t3.com^
 ||sxundrh.cn^
 ||sxzl6x4k9p.com^
 ||sybnzs.cn^
@@ -37764,7 +37776,7 @@ zzzyk.com###Tinfo
 141jj.com##.category-wrapper > ul > div[style="line-height:24px;"] > a
 141jj.com##.moboad + .webad
 141jj.com#?#li:contains(/贊助|推廣/)
-141jj.com,jumi.su,preface.ai,r3sub.com##a[href*="bit.ly"]
+141jj.com,jumi.su,preface.ai##a[href*="bit.ly"]
 159i.com###body > table[width="100%"]
 159i.com###header + div > style + div[class]
 159i.com###sop > div:first-child
