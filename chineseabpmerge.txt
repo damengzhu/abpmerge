@@ -2,8 +2,8 @@
 ! Title: Chinese ABP Merge Rules
 ! Description: 该规则合并自AdGuard中文语言规则、10007自用规则、jiekouAD规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2026-07-03 05:08:36
-! Total count: 38455
+! Version: 2026-07-03 18:36:31
+! Total count: 38484
 -1367066484.cos.
 -1325890192.cos.
 -1325890192.cos.
@@ -1427,6 +1427,7 @@
 ##.adv7
 ##.advInfoElem
 ##.advItem
+##.advList
 ##.advMasthead
 ##.adv_top
 ##.advert--placeholder
@@ -2778,12 +2779,23 @@
 ##.spon-img[src*=".alicdn."]
 ##.sponsor-application-item
 ##.sponsor-banner
+##.sponsor-block
 ##.sponsor-bottom
 ##.sponsor-div
+##.sponsor-inner
+##.sponsor-left
 ##.sponsor-popup
+##.sponsor-right
+##.sponsor-slot
+##.sponsor-spot
 ##.sponsor_popup
+##.sponsored-block
+##.sponsored-buttons
 ##.sponsored-home-page-inner
 ##.sponsored-items
+##.sponsored-right
+##.sponsored-slot
+##.sponsored-top
 ##.spot-place
 ##.spot_nav_under_ad
 ##.ssr1
@@ -3817,6 +3829,7 @@
 ##a[href] > img[alt="TYC"]
 ##a[href] > img[alt][src^="/6666"]
 ##a[href] > img[alt][src^="/static/resources/lp.php"]
+##a[href][data-ad-slot-name][data-ad-type]
 ##a[href][data-ad]
 ##a[href][data-ad_slot_name]
 ##a[href][data-event="ad_click"]
@@ -4795,6 +4808,9 @@
 ##img[src$="/ads.jpg"]
 ##img[src$="/ads.png"]
 ##img[src$="/img/tianbo.gif"]
+##img[src$="960u120.gif"]
+##img[src$="960u60.gif"]
+##img[src$="960u80.gif"]
 ##img[src$="_b"][style$="z-index:1"]
 ##img[src*=".c-ctrip.com"][style="width:100%;height:70px;"]
 ##img[src*=".jd.com"][style="width:100%;height:70px;"]
@@ -6139,6 +6155,8 @@ $websocket,domain=wap.yushuwu.cloud
 /*/*/resource/*/source/*.js$script,third-party
 /*/*/source/*/resource/*.js$script,third-party
 /*/*960u120.gif
+/*/*960u60.gif
+/*/*960u80.gif
 /*/div_art_s.js
 /*/div_art_x.js
 /*0/*all*.js$~third-party,script
@@ -14916,6 +14934,8 @@ kikinote.net##.pc_ad
 kissjav.li##img[id="player-fluid_logo_image"],[id^="player-advertising"]
 kisssub.org###kanban
 kisssub.org##a > img[src*=".0o0.ooo/"]
+kittykawai.com##.g-single
+kittykawai.com##.tracking-btn
 kiutaku.com##div[class^="i"][class*="9"]
 kjsv.com###advertisingMap
 kk200300.com##.xuanfu
@@ -16627,6 +16647,8 @@ porncide.com,porncide.net##script[src^="/themes/"] ~ div[style]:not([class]):not
 pornclassic.com,pornclassic.net,pornclassic.tube##.jw-hardlink-inner
 porncloud.cc###spot-player
 porncloud.cc,sex-home.com,xclub101.pro##.sp-holder
+porndead.*/themes/1.js
+porndead.*/themes/3.js
 porndoe.com##[class^="-banner"],[href*="//ads"],[href^="/redirect"]
 porndoe.com##div.-ad-top-wrap
 porndrake.com##.sicce-300x250
@@ -17858,6 +17880,7 @@ stheadline.com##.section-popular
 sthuojia.net##^script:has-text(myJs.)
 sthuojia.net##div[id]:not([class]):not([style])
 sto520.com#?#.content > div.book > div[style^="text-align"]:has(> ins.adsbygoogle)
+stobox.netlify.app#@#a[href*=".com:"][target="_blank"][class] > span
 stock87.com##a[href^="http"]:not([href*="stock87."]) > img[src*="uploadfiles/image/"]
 stock87.com##div[id^="Javascript"]
 stock87.com##div[style^="position:relative;width:1000px;height:90px;"]
@@ -19773,6 +19796,7 @@ zzzyk.com###Tinfo
 ||0kkbb.com/js/i.js
 ||0krdn3.com^
 ||0l34c7sqy.com^
+||0l7t5qhb4.com^
 ||0m483y7.cn^
 ||0m9mjmrd.top^
 ||0nkwep2fh.com^
@@ -20147,6 +20171,7 @@ zzzyk.com###Tinfo
 ||1qfxm8hgqd.com^
 ||1qkssfop4l.com^
 ||1qocqk1fho.com^
+||1r0br5zeq.com^
 ||1rljzo9nt.com^
 ||1rwa5e8a6.com^
 ||1s8hpetv3.com^
@@ -21004,6 +21029,7 @@ zzzyk.com###Tinfo
 ||6o2k80jf8w.com^
 ||6o719vq4x.com^
 ||6ogiuks905.com^
+||6ovzwbq4o.com^
 ||6p2g1kk03.com^
 ||6p6vcukqz.com^
 ||6park.com/img/*0.gif
@@ -25937,6 +25963,7 @@ zzzyk.com###Tinfo
 ||fthqzxq.cn^
 ||ftimg.net/s?z=
 ||ftiodfqk.com^
+||ftqn9wedv.com^
 ||ftrfnx.icu^
 ||fttzfw.top^
 ||fuentekj.com^
@@ -33725,6 +33752,7 @@ zzzyk.com###Tinfo
 ||trafficstars.com$third-party
 ||traiqnien.com^
 ||trandgid.com^$third-party
+||trapezium69.top^
 ||travel44.top^
 ||trc.taboola.com^
 ||treatment11.top^
@@ -35447,6 +35475,7 @@ zzzyk.com###Tinfo
 ||xiaoz.top/assets/imgurl.js
 ||xiarikui08.com^
 ||xiazaizhijia.com/w2/js/wxzzj.js
+||xibuvdzihpjlrq.com^
 ||xibvdjz2x2.com^
 ||xiexingcun.com/tongji.js
 ||xiexingcun.com/tyong.js
