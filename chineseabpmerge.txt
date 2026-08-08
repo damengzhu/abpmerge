@@ -2,8 +2,8 @@
 ! Title: Chinese ABP Merge Rules
 ! Description: 该规则合并自AdGuard中文语言规则、10007自用规则、jiekouAD规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2026-08-08 16:41:30
-! Total count: 38582
+! Version: 2026-08-09 04:30:20
+! Total count: 38586
 -1367066484.cos.
 -1325890192.cos.
 -1325890192.cos.
@@ -5969,12 +5969,14 @@ $websocket,domain=wap.yushuwu.cloud
 .top/?channelCode=$document
 .top/?channelCode=$~third-party
 .top/?token=$third-party
+.top/YL/*0*/*.json$third-party
 .top/ad*/mobile.js$~third-party
 .top/ad*/show.js$~third-party
 .top/ad-
 .top/ad/
 .top/ads/
 .top/api.php?mod=ad&
+.top/dh/*0*/*.json$third-party
 .top/foot.php?ver=17$~third-party
 .top/g3/myString3AsyncG?$third-party
 .top/gluinfo.php?s=$third-party
@@ -10678,10 +10680,10 @@ avple.tv##.jss13
 avple.tv##.jss13
 avple.tv##.jss20
 avple.tv##.jss20
-avsubtitles.com##+js(rmnt, script, document.dispatch)
-avsubtitles.com##+js(rmnt, script, window.AdProvider)
 avsubtitles.com#@#.main_and_ads_block
 avsubtitles.com#@#[class*="ads_"]:not([class*="reads_"])
+avsubtitles.com,x-video.tube##+js(rmnt, script, document.dispatchEvent)
+avsubtitles.com,x-video.tube##+js(rmnt, script, window.AdProvider)
 avsuggest.com,qiaobutang.com##.overlay
 avtb01.com##.ads-player
 avtb01.com##a[href^="http://xgn66.com/?aff="]
@@ -15208,8 +15210,10 @@ league-funny.com#%#//scriptlet("prevent-setTimeout", "ad_num_show")
 league-funny.com,coco01.net##.scupioadslot
 leakav.com##.fp-brand
 leakav.com##.▶
+leakedzone.com##.banner_after_player_view_post
 leakedzone.com##.item:has(img[alt="Premium Porn"])
 leakedzone.com##div:has(script[src$="ad-provider.js"])
+leakedzone.com##div[class^="koukoku"]
 leaks4fap.com##a[href*=".com/go.php?"]
 leiling.org##.ad__single-double-rectangle-wrap
 lenniu.com##.caClass
@@ -17252,7 +17256,7 @@ rule34-videos.com##[class*="-ad-"]
 rule34-videos.com##[class^="ad-"]
 rule34-videos.com##div.ad-banner
 rule34-videos.com##div.post-ad-wrapper
-rule34.tube##.fp-logo
+rule34.tube,x-video.tube##.fp-logo
 rule34.us,rule34.xxx##[data-cl-spot]
 rule34.us,rule34.xxx##div[id*="-spot"]
 rule34gen.com##.search-ai-slot
