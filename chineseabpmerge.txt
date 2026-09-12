@@ -2,8 +2,8 @@
 ! Title: Chinese ABP Merge Rules
 ! Description: 该规则合并自AdGuard中文语言规则、10007自用规则、jiekouAD规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2026-09-12 19:59:47
-! Total count: 38848
+! Version: 2026-09-13 05:57:53
+! Total count: 38865
 -1367066484.cos.
 -1325890192.cos.
 -1325890192.cos.
@@ -183,6 +183,7 @@
 ###ads-container-single
 ###ads-container-top
 ###ads-tubiao
+###ads-tubiao + #site-partners
 ###ads.row
 ###adsModal
 ###ads_c_tpc
@@ -5615,6 +5616,7 @@ $websocket,domain=wap.yushuwu.cloud
 .com/sn/*?*&*id=2032069$third-party
 .com/solid.gif?z=*=*=*=$third-party
 .com/stat-qq.html?*&click_url_final=$all
+.com/static/foot.js$~third-party
 .com/static/js/ad.js
 .com/static/js/foot.js$~third-party
 .com/static/js/head.js$~third-party
@@ -6052,6 +6054,7 @@ $websocket,domain=wap.yushuwu.cloud
 .us/js/ads/
 .vip/ads/
 .vip/astyle/wap.js$script,~third-party
+.vip/ban.js$~third-party
 .vip/facaishang.js
 .vip/facaishang.js$script
 .vip/facaishen*.js$script,~third-party
@@ -7589,6 +7592,7 @@ $websocket,domain=wap.yushuwu.cloud
 /js/xp.js
 /js/xt.js
 /js/xtc.js
+/js/yihg*.js?17
 /js/yueyupp_3.js
 /js/yzgg.js
 /js/zx.js
@@ -7864,7 +7868,11 @@ $websocket,domain=wap.yushuwu.cloud
 /public/042*.js$~third-party,script
 /public/110110.js$~third-party
 /public/adf*.js?v=
+/public/fd_foot.js$~third-party
+/public/fd_top.js$~third-party
 /public/imgbed/gg/*
+/public/js/fd_foot.js$~third-party
+/public/js/fd_top.js$~third-party
 /public/tingshu/foor.js$~third-party
 /pushportal/PushPortalServer$popup,third-party
 /pushstart.aspx?$popup,third-party
@@ -7995,10 +8003,12 @@ $websocket,domain=wap.yushuwu.cloud
 /static*/gd.js
 /static*/pf.js?v=
 /static*js/ad*.js$script,~third-party
+/static/*/jsgdhx*.js
 /static/*dipiao*.js$~third-party
 /static/*dipiao.js$~third-party
 /static/*dipiao2.js$~third-party
 /static/*ds/ttss.js$script,~third-party
+/static/*gdhx*.js
 /static/*nb/static.js
 /static/042*.js$~third-party,script
 /static/23wx/idd.js
@@ -8910,6 +8920,7 @@ $websocket,domain=wap.yushuwu.cloud
 @@.cn/k/*$script,third-party,domain=autohome.com.cn|qq.com
 @@.cn:8005/$domain=www.ntdm9.com|www.mxdm9.com|mxdm6.com|ntdm6.com
 @@.com/*interstitial*.js$domain=reddit.com
+@@.com/1.js$domain=xjujitv.com
 @@.com/ad.aspx|$domain=xdingdian.cc
 @@.com/adv/$domain=my.ctrip.com
 @@.com/js/a_d/$domain=colamanga.com
@@ -18810,7 +18821,6 @@ vipthz.com###fwin_content_imc_attachad [style="WIDTH: 100%; padding-left:10px;"]
 viu.com##div[data-marker-title="undefined"]
 viu.com##div[id^="info"]
 vivatube.com###spot_video_underplayer_livecams
-vivatube.com##.whack.adv
 vjmedia.com.hk###author-spotlight + .clear + div
 vjmedia.com.hk###text-33
 vjmedia.com.hk##.code-block
@@ -19648,6 +19658,8 @@ yesky.com##.main_left_advertisement
 yesky.com##.rightGg
 yesky.com##div[class^="ad1"]
 yesky.com##div[class^="ad7"]
+yesporn.vip###wb
+yesporn.vip##+js(rmnt, script, /NativeAd|popunderURL/)
 yeyemo4.com,yeyemo5.com,yeyemo6.com,yeyemo7.com,yeyemo8.com,yeyemo9.com##center > a[target="_blank"] > img
 yfsp.tv,aiyifan.tv,iyf.tv##.video-player + div.ps > div:has(> div.bb)
 yfsp.tv,aiyifan.tv,iyf.tv##.video-player > .dabc > .ng-star-inserted[style="position: relative;"]
@@ -22474,6 +22486,7 @@ zzzyk.com###Tinfo
 ||aiyangedu.com/static/cpt/pubuliu.
 ||aiyidu.com/aiyidu/adver/
 ||aiyifan.tv/app/*.js$replace=/this\.shouldSkipAds\|\|/!0||/
+||aiyingtv.*/static/foot.js
 ||aiyuke.com/position_js*_*_
 ||aizhan.com/images/img/apicn.
 ||aizhan.com/images/img/ios-sign.png
@@ -23533,6 +23546,7 @@ zzzyk.com###Tinfo
 ||biz.weibo.com^
 ||bj-gov-cn.website^
 ||bj1.118pan.com^
+||bj8g3fso1i.com^
 ||bj9zvb5ih.com^
 ||bjcathay.com/s?z=
 ||bjfsk.xyz^
@@ -23926,6 +23940,7 @@ zzzyk.com###Tinfo
 ||c114.com.cn/default_inc/a/images/
 ||c114.com.cn/js/channel.js
 ||c114.com.cn^*/js/ad_load-new.js
+||c166fuy29o.com^
 ||c1d8i3p6.com^
 ||c1km4.com/mobile/app.js
 ||c1qm3mg41.com^
@@ -25083,6 +25098,7 @@ zzzyk.com###Tinfo
 ||dfxwdc.com^
 ||dg186.cn^
 ||dgav*.*/site-sections.js?v=
+||dgav*.*/site.json?timestamp=
 ||dgav*.com/mkm.js?v=20
 ||dgav*.com/site-runtime.js
 ||dgaxrjj0jwpwp.cloudfront.net^
@@ -35129,6 +35145,7 @@ zzzyk.com###Tinfo
 ||wangjing.cn*/upload/com/
 ||wangjing.cn/iframe/zhounian.php?
 ||wangjing.cn/images/js/YlFloat.js
+||wangkaixin.com/t.js
 ||wangxialin.top^
 ||wangyq.ltd^
 ||wangzhanmeng.com/link/link.html
