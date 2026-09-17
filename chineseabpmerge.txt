@@ -2,8 +2,8 @@
 ! Title: Chinese ABP Merge Rules
 ! Description: 该规则合并自AdGuard中文语言规则、10007自用规则、jiekouAD规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2026-09-17 06:40:52
-! Total count: 38424
+! Version: 2026-09-17 21:06:06
+! Total count: 38440
 -1367066484.cos.
 -1325890192.cos.
 -1325890192.cos.
@@ -1427,6 +1427,7 @@
 ##.adv-6park
 ##.adv-couplets
 ##.adv-g1
+##.adv-img
 ##.adv-overlay
 ##.adv1
 ##.adv2
@@ -2684,6 +2685,7 @@
 ##.pggc > .ng-star-inserted
 ##.pggd > .ng-star-inserted
 ##.pggf > .ng-star-inserted
+##.pgx-slot[data-pos*="ads"]:not([data-pos*="read"])
 ##.phone-ads
 ##.phone-only:not([id])
 ##.photo-two > a[onclick^="_czc."]
@@ -2792,6 +2794,7 @@
 ##.ripro_gg_wrap
 ##.rm-one.rm-list > a
 ##.rm-twoa > a[href*=".umtrack.com"]
+##.rmadb-info
 ##.rmp-ad-container
 ##.room-ad-bottom
 ##.room-ad-top
@@ -2917,12 +2920,15 @@
 ##.toolbar-gg
 ##.tooltip > #tp
 ##.top-a2db[data-group]
+##.top-ad-buttons
 ##.top-ad-container ~ div[id^="remove"][style]
+##.top-ad-slot
 ##.top-ads-amp
 ##.top-ads-container
 ##.top-ads-content
 ##.top-ads-mobile
 ##.top-adv-app
+##.top-banner > .top-and-banners > .top-and-banners-cols
 ##.top-banners
 ##.top-gg
 ##.top-header-ads-mobile
@@ -3305,11 +3311,8 @@
 ##[class*="slick-"][style="display: flex;flex-wrap: wrap;margin-right: 5px;margin-left: 5px;"]
 ##[class*="tdads"]
 ##[class*="view-ads"]
-##[class="adv-img"]
 ##[class="bottommob"][id="bottommob"]
 ##[class="img"][style*="zhanlangimg.dingjiancdn.com"][style*=".gif"]
-##[class="pre-play-adv"]
-##[class="rmadb-info"]
 ##[class][onclick="goAppHtml();"]
 ##[class][onclick="window.location.href='/api/goapp/'"]
 ##[class][onclick="window.location.href='https://www.suyuexs.com'"]
@@ -4138,6 +4141,7 @@
 ##amp-fx-flying-carpet
 ##article > div > div ~ div.auto-link.hover-action[data-link]
 ##article > div.auto-link.hover-action[data-link]
+##article.ad-item
 ##article[itemscope][itemtype] > a[href^="/archives"][target="_blank"]
 ##bkveng
 ##body .has-ad
@@ -4299,6 +4303,7 @@
 ##div#xinxi
 ##div.ad-area > [href]
 ##div.ad-frame-container
+##div.adv-layer[id*="playerAdvLayer"]
 ##div.am-gallery-item > a
 ##div.appad
 ##div.bf_qy DIV.copy_div_btn
@@ -4460,6 +4465,7 @@
 ##div[data-adunit-path]
 ##div[data-adunit]
 ##div[data-adzone]
+##div[data-archive-ad-overlay]
 ##div[data-cl-spot]
 ##div[data-clickadilla-banner]
 ##div[data-e2e="advertisement"]
@@ -4477,7 +4483,6 @@
 ##div[id*="ScriptRootN"]
 ##div[id*="_"][classname$="_f"][class$="_f"]
 ##div[id*="clb-spot"] > iframe[id*="spot"]
-##div[id*="playerAdvLayer"][class="adv-layer"]
 ##div[id*="po-s0"] > div > div[class^="jsv"] > div[class^="container-"] > .row > [class*="col-sm"] > a[rel="noopener nofollow"]
 ##div[id*='cat_'][id*='_ad']
 ##div[id="alert_windows"][class*="q-dialog fullscreen"]
@@ -11027,8 +11032,8 @@ baike.baidu.com##.J-brand-recommend-list-container
 baike.baidu.com##.brand-bottom-content-container
 baike.baidu.com##.invoke-baiduApp-img
 baike.baidu.com##.pinzhuanWrap
+baike.baidu.com##.qtqy-container
 baike.baidu.com##.squareAni.square.super-layer-promote
-baike.baidu.com##[class="qtqy-container"]
 baike.baidu.com##[class="qtqy-container"],[class="yitiao-content J-yitiao-content"],[class="yitiao-title"]
 baike.baidu.com##[class^="relative-shop-"]
 baike.baidu.com##[class^="yitiao-"]
@@ -14185,6 +14190,7 @@ ifeng.com##.ljPop
 ifeng.com##.luckybag
 ifeng.com##.newAdImg
 ifeng.com##.news_ADbox
+ifeng.com##.openapp
 ifeng.com##.pic1000
 ifeng.com##.pic300
 ifeng.com##.pic950
@@ -14202,7 +14208,6 @@ ifeng.com##.yiyuan
 ifeng.com##.yy_right_bottom
 ifeng.com##IFRAME[frameborder='0'][border='0']
 ifeng.com##[class*="temp-ad"]
-ifeng.com##[class="openapp"]
 ifeng.com##[class^="ad_box"]
 ifeng.com##[class^="appRecommend"]
 ifeng.com##[class^="bottom_box"]
@@ -16851,7 +16856,7 @@ pornhub.com##.videoPremiumBlock
 pornhub.com##[data-event="header_paid_tabs"]
 pornhub.com##[srcset*="bloB:"]
 pornhub.com##a[href^="https://www.uviu.com"]
-pornhub.com##div[class="video-wrapper"] > .clear.hd:has(.adsbytrafficjunky)
+pornhub.com##div.video-wrapper > .clear.hd:has(.adsbytrafficjunky)
 pornhub.com##div[id^="customSkin"]
 pornhub.com##img[srcset]
 pornhub.com,pornhub.net,pornhub.org##.realsex
@@ -17820,9 +17825,9 @@ soft8ware.com#%#//scriptlet('prevent-setTimeout', 'triggerAdBlockModal')
 softblog.tw#@#.dshare
 sogi.com.tw###ad
 sogi.com.tw###cookie-bar
-sogi.com.tw##div[class="row my-2 ad-slot-970"]
-sogi.com.tw#?##main > div.container:has(> div#ad)
-sogi.com.tw#?#.editable > div.text-center:has(> div.d-inline-block > div[id^="div-gpt-ad"])
+sogi.com.tw###main > div.container:has(> div#ad)
+sogi.com.tw##.ad-slot-970
+sogi.com.tw##.editable > div.text-center:has(> div.d-inline-block > div[id^="div-gpt-ad"])
 sogou.com###PZL
 sogou.com###PZL
 sogou.com###PZR
@@ -17986,9 +17991,9 @@ spankbang-com.zproxy.org,spankbang.com,spankbang.party###interstitial_div_v2
 spankbang-com.zproxy.org,spankbang.com,spankbang.party###interstitial_div_v3
 spankbang-com.zproxy.org,spankbang.com,spankbang.party###shorts-frame
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##.ptgncdn_holder
+spankbang-com.zproxy.org,spankbang.com,spankbang.party##.thumb.is_live
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##.video-inline-ads
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##[class*="_ad"]
-spankbang-com.zproxy.org,spankbang.com,spankbang.party##[class="thumb is_live"]
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##[class^="lv_cm_int_"]
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##div[class*="top"] > img[src][class*="cls"]
 spankbang-com.zproxy.org,spankbang.com,spankbang.party##iframe[src*="deliver.ptgncdn.com"]
@@ -18250,6 +18255,7 @@ teepr.com###topAdBlock
 teepr.com##.shop-widget
 teepr.com##body .ucfad_async
 teepr.com##div[class^="mid-post-ad-"]
+telegra.ph##p .inline:empty:only-child
 template/m1938pc/ads/*.js
 tgb.cn###headerggContent
 tgbus.com###neck_970
@@ -20590,6 +20596,7 @@ zzzyk.com###Tinfo
 ||2hlcovn7n.com^
 ||2i0lliongn.com^
 ||2j9banjbst.com^
+||2jdr5wuyzf.com^
 ||2jse6.icu^
 ||2juyabihe.com^
 ||2kandy.com/js/123/
@@ -20625,6 +20632,7 @@ zzzyk.com###Tinfo
 ||2xx63f0bfy.com^
 ||2y2lttjs.hair^
 ||2yjw.com/statics/js/jquery.min.
+||2ypqjxnzo.com^
 ||2ytoxb1r7.com^
 ||2zjftxgl5s.com^
 ||2ztav5r7r.com^
@@ -21783,6 +21791,7 @@ zzzyk.com###Tinfo
 ||9tlfy3rrh.com^
 ||9tour.cn/x2/images/czmf.jpg
 ||9txnu9rlmd.com^
+||9uza7fi60e.com^
 ||9v7sbm9zc.com^
 ||9vmbje748.com^
 ||9wcn.com/gcld/500.gif
@@ -23617,6 +23626,7 @@ zzzyk.com###Tinfo
 ||brendanbc.com^
 ||brfgbn.xyz^
 ||brfvyrrp.com^
+||bridge32.top^
 ||bridgetnbe.com^
 ||briefcase95.com^
 ||brirriek.com^
@@ -25948,6 +25958,7 @@ zzzyk.com###Tinfo
 ||fdluoxnn.com^
 ||fds-1230.cc^
 ||fdtarpaueilvrs.com^
+||fe7xxmtg3.com^
 ||fedoq.com^
 ||feeceeyf.com^
 ||feed.baidu.com^
@@ -28148,6 +28159,7 @@ zzzyk.com###Tinfo
 ||j0saeheja5.com^
 ||j1.piaobing.com^
 ||j12eaw9xs.com^
+||j17xor750.com^
 ||j1bla75rck.com^
 ||j1s956aee8.com^
 ||j2fu64j4e.com^
@@ -34018,6 +34030,7 @@ zzzyk.com###Tinfo
 ||u6421d8aqt.com^
 ||u67qpnaexu.com^
 ||u6uy9lzdcj.com^
+||u6vlqrwcv.com^
 ||u6xpn4qn5b.com^
 ||u6yzoru6u.com^
 ||u7em6.xyz^
@@ -34368,6 +34381,7 @@ zzzyk.com###Tinfo
 ||vansky.com/agdg/vans/adv
 ||vansky.com/agdg/vans/tabbao
 ||vansky.com/index_files/*.gif
+||vapvllaajrhhzc.com^
 ||variflight.com/carnoc/ad/
 ||vast.doublemax.net/adserver/vast.xml$script,xmlhttprequest,other,redirect=noopvast-2.0
 ||vaudeville44.top^
@@ -36040,6 +36054,7 @@ zzzyk.com###Tinfo
 ||ykyfhxr.xyz^
 ||yl.medeanicene.com^
 ||yl04z4v.cn^
+||yl9c8v1le.com^
 ||ylkvxrimr.com^
 ||ylr1xn2b4i.com^
 ||ylznwl.cn^
@@ -36449,6 +36464,7 @@ zzzyk.com###Tinfo
 ||zdo-bdg.xyz^
 ||zdobdg.fyi^
 ||zdqx.com/statics/v1/images/gif/
+||zdr6wn2f5.com^
 ||zdvfpa.xyz^
 ||zdwykjd.icu^
 ||zdx25.site^
