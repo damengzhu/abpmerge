@@ -2,8 +2,8 @@
 ! Title: Chinese ABP Merge Rules
 ! Description: 该规则合并自AdGuard中文语言规则、10007自用规则、jiekouAD规则
 ! Homepage: https://github.com/damengzhu/abpmerge
-! Version: 2026-09-23 21:24:38
-! Total count: 38510
+! Version: 2026-09-24 06:45:37
+! Total count: 38512
 -1367066484.cos.
 -1325890192.cos.
 -1325890192.cos.
@@ -11004,9 +11004,7 @@ baidu.com#@##header > div:last-child
 baidu.com#@##page-pre
 baidu.com#@##results > div[class]:not(.result):not(.result-op):not(.sp-rslt-bar)
 baidu.com#@##results > div[class]:not(.result):not(.result-op):not(.sp-rslt-bar):not(.s-group-result):not(.hint-unsafe)
-baidu.com#@#.ad-wrapper
 baidu.com#@#.share-line
-baidu.com#@#[class$="-ad"]
 baidu.com#@#div[class*="ads"]
 baidu.com,bdimg.com###aside-ad
 baidu.com,bdimg.com,tieba.com###aside-ad
@@ -14883,8 +14881,8 @@ jingyanlib.com##.admorecon
 jingyanlib.com##.adsign
 jingyanlib.com##.article-adcon
 jingyanlib.com##[adtemplate]
+jingyanlib.com##[class$="-ad"]
 jingyanlib.com##div[id^="adIndex"]
-jingyanlib.com,xvideos.com##[class$="-ad"]
 jinhua.com.cn##.FocusAD
 jinhua.com.cn##.banner1200
 jinhua.com.cn##.banner260
@@ -18227,11 +18225,12 @@ taotu.org##a[href="/jbb"]
 taotu.org##img[src*="/adimages/"]
 taoziba.cc##.vddb2 + a
 tap4porn.cc##+js(set, window.adsbyjuicy, noopfunc)
-tap4porn.cc##.vp-mobile-ad
+tap4porn.cc##.ad-mobile-only:style(height: 1px !important)
 tap4porn.cc#@#.ad-slot:not(.adsbox):not(.adsbygoogle)
 tap4porn.cc#@#.ad-zone
 tap4porn.cc#@#.ad-zone:not(.textads)
 tap4porn.cc#@#.sponsor-block
+tap4porn.cc#@#.vp-mobile-ad
 tap4porn.cc#@#script[src$="/js/jads.js"] + ins[id]
 tasexy.com##[id^="sexy_a"]
 tasexy.com##[id^="sexy_b"]
@@ -19389,7 +19388,9 @@ xuite.net##div[id^="index-ad-mid"]
 xunlei.com##.mini-pop
 xunleisou.pro##.rststat > font[color="red"]
 xvideo.cc#%#//scriptlet("set-constant", "poped", "true")
+xvideos.com##.ad-placeholder
 xvideos.com##.thumb-inside:has(.adsbyexoclick)
+xvideos.com##[class$="-ad"]:not(#related-videos):not([class*="related"])
 xvideos.com,xvideos.es##.player-video.xv-cams-block
 xvideos.name###publicidad-video
 xvideos2.com.se##.mobile-show
@@ -33889,6 +33890,7 @@ zzzyk.com###Tinfo
 ||tslkd9ygnh.com^
 ||tsuh.cn^
 ||tsyndicate.com^
+||tsyndicate.com^$script,redirect=noopjs,domain=tap4porn.cc
 ||tt.biquge.la^
 ||tt1069.com/bbs/page20_top.php
 ||tt1069.com/bbs/zgg_
